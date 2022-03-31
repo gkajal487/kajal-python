@@ -1,0 +1,10 @@
+import time
+pid=input('enter the  pid:')
+pname=input('enter the pname:')
+pprice=input('enter the pprine:')
+company=input('enter the company:')
+print('..product information..')
+print(pid,pname,pprice,company)
+print()
+time.sleep(2)
+print('end of an application')

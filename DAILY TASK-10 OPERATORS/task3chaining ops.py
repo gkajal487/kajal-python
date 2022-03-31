@@ -1,0 +1,25 @@
+import time
+x1=eval(input("enter thevalue of x1:"))
+y1=eval(input("enter the value of y1:"))
+print()
+print("using comparision operator")
+res1=x1>y1
+print(res1)
+print(type (res1))
+print()
+res2=x1<y1
+print()
+print(res2)
+print(type(res2))
+res1=x1>=y1
+print(res1)
+print(type (res1))
+print()
+res2=x1<=y1
+print()
+print(res2)
+print(type(res2))
+print()
+print()
+time.sleep(2)
+print("end of an application")

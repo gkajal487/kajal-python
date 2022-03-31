@@ -1,0 +1,16 @@
+import time
+from sys import argv
+print('argv')
+print(type(argv))
+print()
+print("using indexing operator")
+print(argv[1])
+print(argv[2])
+print(argv[3])
+print()
+print(type(argv[1]))
+print(type(argv[2]))
+print(type(argv[3]))
+print()
+time.sleep(2)
+print('end of an application')

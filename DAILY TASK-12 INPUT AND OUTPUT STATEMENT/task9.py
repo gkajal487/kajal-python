@@ -1,0 +1,11 @@
+import time
+xname=input('enter the value of x:') 
+yname=input('enter the value of y:')
+print('user details')
+print("my xname is",xname)
+print("my yname is",yname)
+print()
+print("my full name is",xname,yname,end="  ")
+print()
+time.sleep()
+print('end of an application')

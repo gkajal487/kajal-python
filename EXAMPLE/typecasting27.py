@@ -1,0 +1,15 @@
+import time
+print("before typecasting")
+x1=input("enter the value of x1:")
+x2=input("enter the value of x2:")
+print()
+print(type(x1))
+print()
+print(type(x2))
+res2=x1=x2
+print("the result is:",res2)
+print()
+print(type(res2))
+print()
+time.sleep(3)
+("end of an application")

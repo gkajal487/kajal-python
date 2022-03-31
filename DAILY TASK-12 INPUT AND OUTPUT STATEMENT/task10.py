@@ -1,0 +1,13 @@
+import time
+mname=input('enter the mname:')
+lname=input('enter the lname:')
+fname=input('enter the fname:')
+print()
+print('user details')
+print('mname is:',mname)
+print('lname is:',lname)
+print()
+print('my full name is',mname,lname,fname,end='   '"   ")
+print()
+time.sleep(2)
+print("end of an application")
