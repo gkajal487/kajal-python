@@ -1,0 +1,17 @@
+import time
+def type_case1():
+    print("kajal information")
+    kid=input("enter the kajal id:")
+    ksal=input("enter the kajal salary")
+    kdesign=input("enter the kajal design:")
+    company=input("enter the company")
+    print()
+    print("Kid is:",kid)
+    print("Ksal is ",ksal)
+    print("Kdesign is:",kdesign)
+    print("company is :",company)
+    print()
+type_case1("kid","ksal","kdesign","company")
+print()
+time.sleep()
+print("end of an application")

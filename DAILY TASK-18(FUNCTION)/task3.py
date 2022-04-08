@@ -1,0 +1,15 @@
+import time
+def product_case1(pid,pname,price):
+    print("product information")
+    print("pid is:",pid)
+    print("pname is:",pname)
+    print("price is:",price)
+    print()
+product_case1("pid","pname","price")
+print()
+product_case1("pid","pname","price")
+print()
+product_case1("pid","pname","price")
+print()
+time.sleep(2)
+print("end of an application")
