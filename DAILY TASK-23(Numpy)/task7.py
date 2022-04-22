@@ -1,0 +1,16 @@
+import time
+import numpy as np
+d1=np.array([1000,3000,4000,5000,6000,8000])
+print()
+print("using slice operator ")
+print(d1[1:4:1])
+print(d1[2::4])
+print(d1[1:2:4])
+print(d1[2:3:1])
+print(d1[1:0:1])
+print(d1[2:3:4])
+print()
+print("the dimension are",d1.ndim)
+print()
+time.sleep(2)
+print("end of an application")
