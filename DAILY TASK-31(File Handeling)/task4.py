@@ -1,0 +1,10 @@
+import time 
+f=open("okok.txt","w")
+f.write("Abc@gmail.com\n")
+f.write("ABC@gmail.com\n")
+f.write("abc@gmail.com\n")
+print()
+print("A new file with its content is created successfully")
+f.close()
+time.sleep(2)
+print("End of an applcation ...")

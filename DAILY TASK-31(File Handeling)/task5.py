@@ -1,0 +1,10 @@
+import time 
+f=open("okok.txt","a")
+f.write("2345\n")
+f.write("12345\n")
+f.write("4567\n")
+print()
+print("A new file with its content is created successfully")
+f.close()
+time.sleep(2)
+print("End of an applcation ...")

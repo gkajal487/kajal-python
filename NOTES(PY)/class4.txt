@@ -1,0 +1,342 @@
+Str data type:
+===========
+What is string?
+------------------
+->String can be rerpesent as collection of characters and sequence of characters enclosed with 
+('')or("")or('''''')or(""""""").
+->While working with string data type space also consider a character 
+->Python supports positive index which starts from 0 to end-1.It is also known as forward direction.
+->Python also supports negative index which starts from -1 to end+1
+->(''''''')or("""""") is also used for to display multiline content.
+
+
+
+Ex1:
+===
+import time 
+str1='Core Python'
+str2="Core Python"
+str3='''Core Python'''
+str4="""Core Python"""
+str5='10'
+str6="123.67"
+print(str1)
+print(str2)
+print(str3)
+print(str4)
+print(str5)
+print(str6)
+print()
+print(type(str1))
+print(type(str2))
+print(type(str3))
+print(type(str4))
+print(type(str5))
+print(type(str6))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Using positive direction---')
+print(str1[0])
+print(str1[1])
+print(str1[2])
+print(str1[3])
+print()
+print("----Negative direction----")
+print(str1[-11])
+print(str1[-10])
+print(str1[-9])
+print(str1[-8])
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+I will be a 'software developer' after end of the course
+
+
+import time 
+str1="I will be a 'software developer' after end of the course"
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+I'm doing "python" will be a 'software developer' after end of the course
+
+
+import time 
+str1='''I'm doing "python" will be a 'software developer' after end of the course'''
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Hi guys
+Hope you are getting
+Thank you dear students
+
+
+import time 
+str1='''
+Hi guys
+Hope you are getting
+Thank you dear students
+'''
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+import time 
+str1="""
+Hi guys
+Hope you are getting
+Thank you dear students
+"""
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+import time 
+str1='
+Hi guys
+Hope you are getting
+Thank you dear students
+'
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+OUTPUT:
+=======
+ File "test1.py", line 2
+    str1='
+         ^
+SyntaxError: EOL while scanning string literal
+
+
+Slice operator:
+============
+Python supports slice operator.The main objective of slice operator is to make the peices of Python object as per the application requirement.Following is the syntax for slice operator
+
+str1[begin:end(end-1):step]
+
+Form1:
+======
+str1[begin:]
+Here end(end-1) and step is optional.The output of the string would be from given postion till end of the string.
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form1---')
+print(str1[1:])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+form2:
+=====
+str1[:end(end-1)]
+Here begin and step is optional.The output of the string would be from the indexing position till
+end-1 th position.
+str1[:6]
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form2---')
+print(str1[:6])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Form3:
+=====
+str1[begin:end(end-1)]
+
+Here step is optional.The output of the string would be from given position to till end-1 the position.
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form3---')
+print(str1[1:9])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+form4:
+=====
+str1[begin:end(end-1):step]
+The output would be display based on the step which we are using in python script while working with positive index with slice operator.
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form4---')
+print(str1[1:9:1])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form4---')
+print(str1[1:9:2])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form4---')
+print(str1[0:10:4])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+form5:
+======
+[:]or[::] or[0::]
+
+It will display the complete string as the application requirement.
+
+
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form5---')
+print(str1[0:])
+print()
+print(str1[:])
+print()
+print(str1[::])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print('---Form---')
+print(str1[3:7:0])
+print("-------")
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+========
+
+C:\Users\HI\Desktop>Python test1.py
+Core Python
+
+<class 'str'>
+
+---Form---
+Traceback (most recent call last):
+  File "test1.py", line 8, in <module>
+    print(str1[3:7:0])
+ValueError: slice step cannot be zero
+
+C:\Users\HI\Desktop>
+
+
+import time 
+str1="Core Python"
+print("Our string object is:",str1)
+print()
+print("Reverse of a string object is:",str1[::-1])
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+

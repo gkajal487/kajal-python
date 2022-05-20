@@ -1,0 +1,421 @@
+Concrete classes 
+=============
+Python supports concrete classes.The main objective of concrete classes is provide the complete
+services to the application as per the application requirement.
+
+Ex1:
+===
+import time 
+from abc import * 
+class Test1(ABC):
+    @abstractmethod 
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+    @abstractmethod 
+    def m3(self):
+        pass 
+class Test2(Test1):
+    def m1(self):
+        print("This is m1 service")
+    def m2(self):
+        print("This is m2 service")
+class Test3(Test2):
+    def m3(self):
+        print("This is m3 services ...")
+t1=Test3()
+t1.m1()
+t1.m2()
+t1.m3()
+print()
+time.sleep(2)
+print()
+print("End of an application ...")
+
+
+Access modifiers:
+==============
+Python supports access modifiers.Following are access modifiers in pyhton.The main objective
+of access modifiers is to work on data on information
+
+->public 
+->proctected
+->private
+
+->public :
+========
+public is a access modifier in python.The scope of the public can access any where in our application
+
+emp_id=1001 
+
+->proctected:
+==========
+proctected is a access modifier in python.The scope of the protected modifier can access 
+within class and outsite the class as well.We define or declare proctected modifier using
+_followed variable name.
+
+_emp_name="Rahul"
+
+
+->private:
+========
+private is a access modifier in python.The scope of the private modifier can access with the 
+class.We can define or declare private modifier using __variable name
+
+__emp_sal=12000
+
+
+Ex1:
+===
+import time 
+class QT_class:
+    emp_id=1001   # public
+    _emp_name="Rahul Reddy"  # protected
+    __emp_sal=12000  # private
+    def m1(self):
+        print("Eid  is:",QT_class.emp_id)
+        print("Ename is:",QT_class._emp_name)
+        print("Esal is:",QT_class.__emp_sal)
+q1=QT_class()
+q1.m1()
+print()
+print("Eid  is:",QT_class.emp_id)
+print("Ename is:",QT_class._emp_name)
+#print("Esal is:",QT_class.__emp_sal)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+Encupsulation in python:
+====================
+Python supports encupsulation.It is process or methodlogy to the hide the internal implementation and showing the services what we are offering.In python we can implement
+encupsulation uisng setters and getters method.The main objective of encupsulation is provide
+the security to data or information
+
+set():It is used to set the data or information
+get():It is used to get the data or information
+
+
+Ex1:
+===
+import time 
+class Product_Info:
+    def setPid(self,pid):
+        self.pid=pid 
+    def getPid(self):
+        return self.pid
+    def setPname(self,pname):
+        self.pname=pname 
+    def getPname(self):
+        return self.pname 
+    def setPrice(self,price):
+        self.price=price 
+    def getPrice(self):
+        return self.price 
+    def setCompany(self,company):
+        self.company=company 
+    def getCompany(self):
+        return self.company 
+p1=Product_Info()
+p1.setPid(1001)
+p1.setPname("Mobile")
+p1.setPrice(17500)
+p1.setCompany("ONE PLUS")
+print()
+print("----Product Information----")
+print("Pid is:",p1.getPid())
+print("Pname is:",p1.getPname())
+print("Price is:",p1.getPrice())
+print("Company is:",p1.getCompany())
+print("-------------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+File handling in python:
+===================
+Python supports file handling.The main objective of file handling is store the limited data or 
+information as per the application requirement
+
+
+open():It is used to open the file.
+open("file_name","mode of the file")
+name:It is an attribte which is used to know the name of the file
+mode:It is an attribute which is used to know mode of the file
+closed:It is an attribute which is used to know wheather file is closed or not
+readable():It is used know wheather file is readable or not
+writable():It is used to know wheather file is writable or not
+
+
+Ex1:
+===
+
+import time 
+f=open("number.txt","r")
+print("---------File information---------")
+print("Name of file is:",f.name)
+print("Mode of the file is:",f.mode)
+print("File is closed or not:",f.closed)
+print("File is readable or not:",f.readable())
+print("File is writable or not:",f.writable())
+print("--------------------------------")
+print()
+f.close()
+time.sleep(2)
+print("End of an applcation ...")
+
+Ex2:
+===
+import time 
+f=open("number.txt")
+print("---------File information---------")
+print("Name of file is:",f.name)
+print("Mode of the file is:",f.mode)
+print("File is closed or not:",f.closed)
+print("File is readable or not:",f.readable())
+print("File is writable or not:",f.writable())
+print("--------------------------------")
+print()
+f.close()
+time.sleep(2)
+print("End of an applcation ...")
+
+
+While working file handling in python we can insert two types data or informatiom
+->Alphanumric data or information
+-Binary data or information
+
+To insert alphanumric data or information we do have following modes
+-----------------------------------------------------------------------------------------
+r--->read mode
+r+ ---->read and write mode 
+w ---->write mode 
+w+ ---->write and read mode 
+a ---->append mode 
+a+ ---->append and read mode 
+x ---->xclusive mode
+x+ ---->xclusive & read mode
+
+
+To insert binary  data or information we do have following modes
+--------------------------------------------------------------------------------
+rb--->read mode
+r+b---->read and write mode 
+wb ---->write mode 
+w+b ---->write and read mode 
+ab ---->append mode 
+a+b ---->append and read mode 
+xb---->xclusive mode
+x+b ---->xclusive & read mode
+
+
+->write()
+->writelines()
+
+>write():
+---------
+It is a predefine function in python while working with file handling.The main objective of write()
+function  is to create a new file with its content.
+
+
+Ex1:
+===
+import time 
+f=open("email.txt","w")
+f.write("Abc@gmail.com\n")
+f.write("ABC@gmail.com\n")
+f.write("abc@gmail.com\n")
+print()
+print("A new file with its content is created successfully")
+f.close()
+time.sleep(2)
+print("End of an applcation ...")
+
+
+Ex2:
+===
+import time 
+f=open("email.txt","a")
+f.write("abc@gmail.com\n")
+f.write("ABC@gmail.com\n")
+f.write("Abc@gmail.com\n")
+print()
+print("A new file with its content is created successfully")
+f.close()
+time.sleep(2)
+print("End of an applcation ...")
+
+
+Ex3:
+===
+import time 
+f=open("email.txt","x")
+f.write("a\n")
+f.write("A\n")
+f.write("1\n")
+print()
+print("A new file with its content is created successfully")
+f.close()
+time.sleep(2)
+print("End of an applcation ...")
+
+OUTPUT:
+=======
+Traceback (most recent call last):
+  File "test1.py", line 2, in <module>
+    f=open("email.txt","x")
+FileExistsError: [Errno 17] File exists: 'email.txt'
+
+
+Ex4:
+===
+import time 
+f=open("abc.txt","x")
+f.write("a\n")
+f.write("A\n")
+f.write("1\n")
+print()
+print("A new file with its content is created successfully")
+f.close()
+time.sleep(2)
+print("End of an applcation ...")
+
+
+->writelines():
+===========
+It is a predefine function in python while working with file handling.The main objective of
+writlines() function to store object information into a file.While storing object information 
+into a file every object must in string type.
+
+Ex1:
+===
+import time 
+f=open("info1.txt","w")
+emp_info=["1001\n","Rahul Reddy\n","45000\n","DAD\n","CG\n"]
+f.writelines(emp_info)
+print("A new file is created ...")
+f.close()
+print()
+time.sleep(2)
+print("End of an applcation ..")
+
+
+Ex2:
+===
+import time 
+f=open("info1.txt","w")
+emp_info1=["1001\n","Rahul Reddy\n","45000\n","DAD\n","CG\n"]
+emp_info2=["1002\n","Ajay Reddy\n","43000\n","DAD\n","CG\n"]
+emp_info3=["1003\n","Atul Verma\n","40000\n","DAD\n","CG\n"]
+f.writelines(emp_info1)
+f.writelines(emp_info2)
+f.writelines(emp_info3)
+print("A new file is created ...")
+f.close()
+print()
+time.sleep(2)
+print("End of an applcation ..")
+
+
+
+->read():It is used to read complete content from the file
+->read(n):It is used read number of characters from the file
+->readline():It is used read only one line
+->readlines():It is used to read one line from the file and perform some operation and geos to
+next line
+
+
+Ex1:
+===
+import time 
+f=open("info1.txt","r")
+d1=f.read()
+print()
+print("-----content of the file----")
+print(d1)
+print("-------------")
+f.close()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex2:
+===
+import time 
+f=open("info1.txt","r")
+d1=f.read(3)
+print()
+print("-----content of the file----")
+print(d1)
+print("-------------")
+print()
+f.close()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex3:
+===
+import time 
+f=open("info1.txt","r")
+d1=f.readline()
+print()
+print("-----content of the file----")
+print(d1)
+print("-------------")
+print()
+f.close()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex4:
+===
+import time 
+f=open("info1.txt","r")
+d1=f.readlines()
+print()
+print("-----content of the file----")
+print(d1)
+print("-------------")
+print()
+f.close()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex5:
+===
+import time 
+f=open("info1.txt","r")
+d1=f.readlines()
+print()
+print("-----content of the file----")
+for d2 in d1:
+    print(d2,end=" ")
+print("-------------")
+print()
+f.close()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+
+
+
+
+
+
+ 
+

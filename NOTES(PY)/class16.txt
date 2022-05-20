@@ -1,0 +1,467 @@
+Nested for loop:
+============
+Python supports nested for loop.It is also known as inner for loop.Nested for loop can be represent if we are defining or declaring a for loop inside another for loop than it is said to nested
+for loop.While working with nested for loop our outer for loop condition must be true
+
+
+for(cond): ---->Outer for loop
+      -----
+      -----
+      for (cond): --->Inner for loop
+              ----
+              ----
+
+
+0
+0
+1
+2
+1
+0
+1
+2
+2
+0
+1
+2
+
+
+Ex1:
+-----
+import time 
+for x in range(3):  #0,1,2
+    time.sleep(1)
+    print(x)
+    for y in range(3):  #0,1,2
+        time.sleep(1)
+        print(y)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+0--0
+0--1
+0--2
+1--0
+1---1
+1---2
+2---0
+2---1
+2---2
+
+Ex2:
+===
+import time 
+for x in range(3):  #0,1,2
+    time.sleep(1)
+    for y in range(3):  #0,1,2
+        time.sleep(1)
+        print(x,"---",y)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+
+Output
+-------
+['A','B','C']
+A
+B
+C
+
+['D','E','F']
+D
+E
+F
+
+['G','H','I']
+G
+H
+I
+
+
+Ex3:
+===
+import time 
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(l1)
+print()
+print(type(l1))
+for l2 in l1:
+    print(l2)
+    for l3 in l2:
+        print(l3)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+
+A
+B 
+C
+D
+E
+F
+G
+H
+I
+
+
+Ex4:
+-----
+import time 
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(l1)
+print()
+print(type(l1))
+print()
+for l2 in l1:
+    for l3 in l2:
+        time.sleep(1)
+        print(l3)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+
+
+A   B   C  D  E  F  G  H  I
+
+
+Ex5:
+===
+import time 
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(l1)
+print()
+print(type(l1))
+print()
+for l2 in l1:
+    for l3 in l2:
+        print(l3,end="  ")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+
+A   B   C
+D   E    F
+G    H   I
+
+
+Ex6:
+====
+import time 
+l1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(l1)
+print()
+print(type(l1))
+print()
+for l2 in l1:
+    for l3 in l2:
+        print(l3,end="  ")
+    print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+#import numpy as np 
+l1=[[[[['A','B','C'],['D','E','F'],['G','H','I']]]]]
+print()
+print(l1)
+print()
+#print("The daimentions are:",l1.ndim)
+print()
+for a in l1:
+    for b in a:
+        for c in b:
+            for d in c:
+                for e in d:#
+                    print(e,end=" ")
+                print() 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex8:
+===
+import time 
+import numpy as np 
+d1=np.array([[[[['A','B','C'],['D','E','F'],['G','H','I']]]]])
+print()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+for a in d1:
+    for b in a:
+        for c in b:
+            for d in c:
+                for e in d:
+                    print(e,end=" ")
+                print() 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Pid    Pname  Price   Company
+========================
+101       A             12                A1
+102       B              13                B1
+103        C              14               C1
+104        D             15                D1
+========================
+
+
+Ex9:
+===
+import time 
+pid=[]
+pname=[]
+price=[]
+company=[] 
+n=int(input("Enter the number of rows:"))
+for x in range(n):
+    a=int(input("Enter the pid:"))
+    pid.append(a)
+    b=input("Enter the pname:")
+    pname.append(b)
+    c=float(input("Enter the price:"))
+    price.append(c) 
+    d=input("Enter the company:")
+    company.append(d) 
+print()
+print("=============================")
+print("Pid","Pname","Price",'Company')
+print("==============================")
+for x1,x2,x3,x4 in zip(pid,pname,price,company):
+    print(x1,x2,x3,x4)
+print("===============================")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+While loop:
+=========
+Python supports while loop.If you want to execute number of statements number of times  if 
+our data or information not in sequence or inifite loop than we can while loop.
+
+i=0
+while(cond):
+       ----
+       ----
+      i+=1
+
+OR
+
+i=0
+while cond :
+       ----
+       ----
+      i+=1
+
+
+Ex1:
+===
+import time 
+i=0 
+while(i<=10):
+    time.sleep(1)
+    print(i)
+    i+=1 
+print()
+time.sleep(1)
+print("End of an applicaion ...")
+
+
+Ex2:
+===
+import time 
+i=0 
+while i<=10:
+    print("*",end="  ")
+    i+=1 
+print()
+print()
+time.sleep(1)
+print("End of an applicaion ...")
+
+
+Ex3:
+===
+import time 
+i=0 
+while(i<=10):
+    print("*",end="  ")
+    i+=1 
+print()
+print()
+time.sleep(1)
+print("End of an applicaion ...")
+
+
+Ex4:
+===
+import time 
+i=0 
+while(True):
+    print(i)
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+i=0 
+while(1):
+    print(i)
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time 
+i=0 
+while(1):
+    print(i)
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex7:
+====
+import time 
+i=0 
+while(False):
+    print(i)
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex8:
+===
+import time 
+i=0 
+while(0):
+    print(i)
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex9:
+===
+import time 
+l1=['S','A','P']
+i=0 
+while(i<len(l1)):
+    print(i)
+    i+=1 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex10:
+====
+import time
+l1=[1000,2000,3000]
+print(l1)
+print()
+i=0 
+sum=0 
+while(i<len(l1)):
+    sum=sum+l1[i]
+    i+=1
+print("Sum of the list is:",sum)
+print()
+time.sleep(2)
+print('End of an application  ...')
+
+
+
+
+Ex10:
+====
+import time 
+l1=['S','A','P']
+print(l1)
+print()
+i=0 
+while(i<len(l1)):
+    print(l1[i])
+    i+=1 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

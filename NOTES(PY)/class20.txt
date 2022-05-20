@@ -1,0 +1,307 @@
+Nameless function in python
+========================
+A function which does not  have any name to the function then it is said to be nameless function.In python we can implement name less function using lambda keyword
+
+Syntax for lambda keyword
+=======================
+s1=lambda x:business logic
+
+
+Ex1:
+-----
+import time 
+s1=lambda x:x*x 
+print("The square of 5 is:",s1(5))
+print()
+print("The square of 7 is:",s1(7))
+print()
+print("The square of 9 is:",s1(9))
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+s1=lambda a,b:a*b 
+print("The mul is:",s1(12,10))
+print()
+print("The mul is:",s1(5,7))
+print()
+print("The mul is:",s1(9,5))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+Ex3:
+===
+import time 
+s1=lambda a,b:a if a>b else b 
+print("The maximum of a two number is:",s1(100,200))
+print()
+print("The maximum of two number is:",s1(123.56,167.89))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+====
+import time 
+s1=lambda a,b,c:a if a>b and a>c else b if b>c else c 
+print("The maximum of thre number is:",s1(12,13,15))
+print()
+print("The maximum of three number is:",s1(12.87,56.87,98.65))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+
+
+-->filter()
+--->map()
+--->reduce()
+
+filter():
+=====
+It is a predefine function in python.It can be applicable for both namefull function and nameless function.The main objective of filter function is filter the data or information as per the application requirement.
+
+
+Ex1:
+-----
+import time 
+print("----Using namefull function----")
+def Test_Odd_Number(number):
+    if(number%2==1):
+        return True 
+    else:
+        return False 
+number=[101,102,110,120,111,97,40,50,60]
+l1=list(filter(Test_Odd_Number,number))
+print("Odd number from list after filter operations are:",l1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+----
+import time 
+print("----Using nameless function----")
+number=[101,102,110,120,111,97,40,50,60]
+l1=list(filter(lambda x:x%2==1,number))
+print("Odd number after filtering are:",l1)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+--->map():
+========
+It is a predefine function in python.The main objective of map() function is take each object from 
+list and perform some operation and store into a seprate list.
+
+
+Ex1:
+===
+import time 
+print('---Using namefull function---')
+def Test_number_Sqaure(num):
+    return num*num 
+number=[2,3,5,7,9,11,13,16,18]
+l1=list(map(Test_number_Sqaure,number))
+print("The sqaure of list number are:",l1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+====
+import time 
+print('---Using nameless function---')
+number=[1,2,3,4,5,6,7,8,9,11]
+l1=list(map(lambda y:y*y,number))
+print("The square of list number are:",l1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+--->reduce():
+==========
+It is a predefine function in python.The main objective of reduce() function is combine python 
+objects into a single entity.While working reduce() we must import functools modules.
+
+
+Ex1:
+===
+import time 
+from functools import *
+total_salary_emp=[45000,43000,36000,48000,56000,67000]
+l1=reduce(lambda x,y:x+y,total_salary_emp)
+print('The total salary from data sceince department is:',l1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+--->Global Variable
+--->Local Variable
+->How to define or declare global variable inside the function
+
+
+--->Global Variable:
+===============
+A variable which is define or declare outside the function then it is said to be global variable.The scope of the global variable we can access any where in our entire application.
+
+Ex1:
+===
+import time 
+d1={"pid":1001,"pname":"laptop","price":56000.0,"company":"Samsung"}
+def Test_Case1():
+    for a,b in d1.items():
+        print(a,"---",b)
+def Test_Case2():
+    for s1,s2 in d1.items():
+        print(s1,"----",s2)
+def Test_Case3():
+    for b1,b2 in d1.items():
+        print(b1,"----",b2)
+Test_Case1()
+print()
+Test_Case2()
+print()
+Test_Case3()
+print()
+for i,j in d1.items():
+    print(i,"----",j)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+-----
+import time 
+name1="Kajal"
+def Test_Case1():
+    print("My name is:",name1)
+def Test_Case2():
+    print("My name is:",name1)
+def Test_Case3():
+    print("My name is:",name1)
+Test_Case1()
+print()
+Test_Case2()
+print()
+Test_Case3()
+print()
+print("My name is:",name1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+--->Local Variable:
+===============
+A variable which is define or declare inside the function.Then it is said to be local variable.The scope of the local variable can access with function only.
+
+
+import time 
+def Test_list1():
+    l1=[10,20,30,40,50,60]
+    sum=0 
+    for x in l1:
+        sum=sum+x 
+    print("The sum of list is:",sum)
+def  Test_tuple1():
+    s1=(10,20,30,40,50,60)
+    i=0
+    while(i<len(s1)):
+        print(s1[i])
+        i+=1 
+Test_list1()
+print()
+Test_tuple1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->How to define or declare global variable inside the function:
+==================================================
+We can define or declare global variable inside the function using global keyword.We can access
+global variable any where in our entire application.
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    global str1 
+    c=0
+    str1="Python is a simple programing language"
+    for x in str1:
+        if x in("aeiouAEIOU"):
+            c+=1 
+            print("Vowels are from given string is:",x)
+    print("Number vowels are:",c)
+def Test_Case2():
+    c=0
+    for x in str1:
+        if x in("aeiouAEIOU"):
+            c+=1 
+            print("Vowels are from given string is:",x)
+    print("Number vowels are:",c)
+
+Test_Case1()
+print()
+Test_Case2()
+print()
+time.sleep(1)
+print('End of an application ...')
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    global student_result 
+    student_result=78 
+    print("Student result is:",student_result)
+def Test_Case2():
+     print("Student result is:",student_result)
+def Test_Case3():
+     print("Student result is:",student_result)
+Test_Case1()
+print()
+Test_Case2()
+print()
+Test_Case3()
+print()
+print("Student result is:",student_result)
+print()
+time.sleep(2)
+print("end of an application")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,363 @@
+Input & Output statement in python:
+==============================
+Python supports I/O statements.The main objective of I/O statements is generate the output or
+various applications invoice output
+
+
+input() ---->input value ---->input function
+print() ------>output  ----->output function
+
+
+Ex1:
+===
+import time 
+pid=input('Enter the pid:')
+pname=input('Enter the pname:')
+price=input('Enter the price:')
+company=input('Enter the company:')
+m_date=input('Enter the m_date:')
+exp_date=input('Enter the exp_date:')
+print()
+print("----Product Information----")
+print("Pid is:",pid)
+print("Pname is:",pname)
+print("Price is:",price)
+print("Compnay is:",company)
+print("M_date is:",m_date)
+print("Exp_date is:",exp_date)
+print("---------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+pid=input('Enter the pid:')
+pname=input('Enter the pname:')
+price=input('Enter the price:')
+company=input('Enter the company:')
+m_date=input('Enter the m_date:')
+exp_date=input('Enter the exp_date:')
+print()
+print("----Product Information----")
+print(pid,pname,price,m_date,exp_date)
+print("---------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+sep:
+===
+It is an attribute which can be return inside the print() function.The main objective of sep attribute is generate the date,time,digital time,amount
+
+print("",sep="")
+
+Ex1:
+===
+import time 
+x,y,z=29,3,2022 
+print("---Date---")
+print(x,y,z,sep="/")
+print()
+print("---Another Date---")
+print(x,y,z,sep="-")
+print()
+print("---Time---")
+print(x,y,z,sep=":")
+print()
+print("---Digital time---")
+print(x,y,z,sep="::")
+print()
+print("---Amount in INR---")
+print(x,y,z,sep=",")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+end:
+===
+It is an attribute which can be return inside the print() statement or function.The main objective of end attibute is to display the multiline content into single line.
+
+print(val,end="")
+
+Ex1:
+===
+import time 
+for x in range(10):
+    print(x)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+for x in range(10):
+    print(x,end="")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex3:
+===
+import time 
+for x in range(10):
+    print(x,end="  ")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+for x in range(10):
+    print(x,end="     ")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+fname=input("Enter the fname:")
+lname=input("Ente the lname:")
+print()
+print("---New User Information---")
+print("My first name is:",fname)
+print()
+print("My last name is:",lname)
+print()
+print("My full name is:",fname,lname,end="  ")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Formatted string:
+==============
+Following are the formatted string in python
+
+%d --->Integer data type
+%i  ---->Interger data type
+%f  ---->Floating data type
+%s ---->string data type
+%s --->list ,tuple,set,dict
+
+a=10
+print("The value of a is":a)
+
+Ex1:
+===
+import time 
+eid=1001
+ename="Satish"
+esal=45000
+design="DAD"
+company="TM"
+skills=['Core Python','numpy','pandas','Power BI']
+print("---Employee Details---")
+print("Eid is:%d"%eid)
+print("Ename is:%s"%ename)
+print("Esal is:%f"%esal)
+print("Design is:%s"%design)
+print("Company is:%s"%company)
+print("Skill are:%s"%skills)
+print("-----------------------")
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+eid=1001
+ename="Satish"
+esal=45000
+design="DAD"
+company="TM"
+skills=['Core Python','numpy','pandas','Power BI']
+print("---Employee Details---")
+print("Eid is:%d"%eid)
+print("Ename is:%s"%ename)
+print("Esal is:%f"%esal)
+print("Design is:%s"%design)
+print("Company is:%s",%company)
+print("Skill are:%s"%skills)
+print("-----------------------")
+print("End of an application ...")
+
+
+OUTPUT:
+=======
+File "test1.py", line 13
+    print("Company is:%s",%company)
+                          ^
+SyntaxError: invalid syntax
+
+
+Welcome to I HUB in Hyderabad for High level software Training
+
+
+Ex3:
+==
+import time 
+trianing_center=input("Enter the training center for IT:")
+city=input("Enter the city name:")
+print()
+print("------------------------------------------")
+print('Welcome to %s in %s for higher level software training'%(trianing_center,city))
+print("-----------------------------------------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Replacement operator({})
+====================
+Replacement operator can be represent or declare as {} which can be return inside the print() statement or function.The main objective of replacement operator is to replace content as 
+per the application requirement.
+
+print(val1,val2,val3.format(val1,val2,val3)
+
+Name of the language is:Python
+Date of  release date is:16/7/1989
+
+Ex1:
+===
+import time 
+langn=input("Enter the language here:")
+day=int(input("Enter the day:"))
+month=int(input("Enter the month:"))
+year=int(input("Enter the year:"))
+print()
+print("---Python language Details---")
+print("Name of the language is:",langn)
+print("Date of release is:{}/{}/{}".format(day,month,year))
+print("----------------------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+langn=input("Enter the language here:")
+day=int(input("Enter the day:"))
+month=int(input("Enter the month:"))
+year=int(input("Enter the year:"))
+print()
+print("---Python language Details---")
+print("Name of the language is:",langn)
+print("Date of release is:{0}/{1}/{2}".format(day,month,year))
+print("----------------------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+langn=input("Enter the language here:")
+day=int(input("Enter the day:"))
+month=int(input("Enter the month:"))
+year=int(input("Enter the year:"))
+print()
+print("---Python language Details---")
+print("Name of the language is:",langn)
+print("Date of release is:{obj1}/{obj2}/{obj3}".format(obj1=day,obj2=month,obj3=year))
+print("----------------------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex4:
+====
+import time 
+langn=input("Enter the language here:")
+day=int(input("Enter the day:"))
+month=int(input("Enter the month:"))
+year=int(input("Enter the year:"))
+print()
+print("---Python language Details---")
+print("Name of the language is:",langn)
+print("USA date format:{1}/{0}/{2}".format(day,month,year))
+print("----------------------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+langn=input("Enter the language here:")
+day=int(input("Enter the day:"))
+month=int(input("Enter the month:"))
+year=int(input("Enter the year:"))
+print()
+print("---Python language Details---")
+print("Name of the language is:",langn)
+print("UK date format:{2}/{1}/{0}".format(day,month,year))
+print("----------------------------------------")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex6:
+===
+import time 
+name="I_HUB"
+print(f"Job oriented training:{name}")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+first_name=input("Enter the first_name:")
+last_name=input("Enter the last_name:")
+print()
+print("---New User details ---")
+print(f"First name is:{first_name}")
+print()
+print(f"Last name is:{last_name}")
+print('---------------------')
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

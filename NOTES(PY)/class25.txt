@@ -1,0 +1,519 @@
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self,sid,sname,sub,marks):
+        self.sid=sid 
+        self.sname=sname 
+        self.sub=sub 
+        self.marks=marks 
+    def m1(self):
+        print("---Student details---")
+        print("Student_Id is:",self.sid)
+        print("Student_Name is:",self.sname)
+        print("Student_Sub is:",self.sub)
+        print("Student_Marks is:",self.marks)
+        print("------------------------")
+        print()
+i1=I_HUB(1001,"Ram","Python",75)
+i1.m1()
+i2=I_HUB(1002,"Rahl","Django",70)
+i2.m1()
+i3=I_HUB(1003,"Ajay","DS",70)
+i3.m1()
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Instance variable:
+=============
+Instance variable can be define or declare using self.variable_name inside the constructo,inside 
+the instance methd,Outside the class using object reference variable.
+
+
+->Defining or declaring
+->Accessing or printing
+->Deleteing the instance variable 
+->Updating the instance variable
+
+
+__dict__:
+========
+It is a specail method OOPL in python.The main objective of this method is display the information or data into key and value format
+
+
+->Defining or declaring an instance variable:
+===================================
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        self.name1="Core Python"
+        self.name2="Oracle database"
+    def m1(self):
+        self.name3="Advance Python"
+        self.name4="MySQL database"
+i=I_HUB()
+print(i.__dict__)
+print()
+i.m1()
+print(i.__dict__)
+i.name5="Django"
+i.name6="MongoDB"
+print(i.__dict__)
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+->Accessing or printing
+===================
+Ex1:
+----
+import time 
+class I_HUB:
+    def __init__(self):
+        self.name1="Core Python"
+        self.name2="Oracle database"
+        print(self.name1)
+        print(self.name2)
+    def m1(self):
+        self.name3="Advance Python"
+        self.name4="MYSQL database"
+        print(self.name3)
+        print(self.name4)
+     
+i=I_HUB()
+print()
+i.m1()
+i.name5="Django"
+i.name6="MongoDB"
+print()
+print(i.name5)
+print(i.name6)
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+->Deleteing the instance variable :
+===========================
+We can delete the instance variable using del keyword followed by instance variable_name.
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        self.name1="Core Python"
+        self.name2="Oracle database"
+        del self.name2
+    def m1(self):
+        self.name3="Advance Python"
+        self.name4="MYSQL database"
+        del self.name4
+i=I_HUB()
+print(i.__dict__)
+print()
+i.m1()
+print(i.__dict__)
+i.name5="Django with Rest Framework"
+i.name6="MongoDB"
+del i.name6
+print(i.__dict__)
+print()
+time.sleep(2)
+print("End of an application ....")
+
+
+Ex2:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        self.name1="Core Python"
+        self.name2="Oracle database"
+    def m1(self):
+        print(self.name1)
+        print(self.name2)
+       
+i=I_HUB()
+print()
+i.m1()
+print()
+print(i.name1)
+print(i.name2)
+time.sleep(2)
+print("End of an application ...")
+
+
+->Updating the instance variable:
+===========================
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        self.emp_sal=37000
+    def m1(self):
+        self.emp_sal=43000 
+i=I_HUB()
+print()
+i.m1()
+i.emp_sal=50000
+print()
+print("Employee salary is:",i.emp_sal)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        self.emp_sal=37000
+        print("Employee salary is:",self.emp_sal)  
+    def m1(self):
+        self.emp_sal=43000 
+        print("Employee salary is:",self.emp_sal)
+i=I_HUB()
+print()
+i.m1()
+i.emp_sal=50000
+print()
+print("Employee salary is:",i.emp_sal)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+Static variable:
+============
+Static variable can be define or declare inside the class and outside the methods.Static variable 
+can be access using class_name followed static variable_name
+
+Ex1:
+===
+import time 
+class I_HUB:
+    company_name="IBM"
+    def __init__(self):
+        pass 
+    def m1(self):
+        pass 
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass 
+i=I_HUB()
+print("Company name is:",I_HUB.company_name)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex2:
+===
+import time 
+class I_HUB:
+    company_name="IBM"
+    def __init__(self,eid,ename,esal,design):
+        self.eid=eid 
+        self.ename=ename 
+        self.esal=esal 
+        self.design=design
+    def m1(self):
+        print("----Employee Details----")
+        print("Employee_Id is:",self.eid)
+        print("Employee_Name is:",self.ename)
+        print("Employee_Salary is:",self.esal)
+        print("Employee_Design is:",self.design)
+
+    
+
+i1=I_HUB(1001,"Mahesh",45000,"DAD")
+i1.m1()
+print("Company name is:",I_HUB.company_name)
+print("------------------------------")
+i2=I_HUB(1002,"Harish",54000,"Python developer")
+i2.m1()
+print("Company name is:",I_HUB.company_name)
+print("------------------------------")
+print()
+i3=I_HUB(1003,"Mohan",60000,"FTPD")
+i3.m1()
+print("Company name is:",I_HUB.company_name)
+print("------------------------------")
+print()
+i4=I_HUB(1004,"Ravi",50000,"Django developer")
+i4.m1()
+print("Company name is:",I_HUB.company_name)
+print("------------------------------")
+print()
+
+time.sleep(2)
+print('End of an application ...')
+
+
+Static variable can be define or declare in following methods
+
+->Inside the constructor using class_name
+->Inside the Instance method using class_name
+->Inside the class method using cls variable and class_name
+->Inside the static method using class name
+->Outside the class using class_name
+
+
+
+->Defining or declaring
+->Accessing or printing
+->Deleting 
+->Updating
+
+
+->Defining or declaring:
+===================
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        I_HUB.a=1002 
+        I_HUB.b=1003  
+i=I_HUB()
+print(i.__dict__)
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        I_HUB.a=1002 
+        I_HUB.b=1003  
+    def m1(self):
+        I_HUB.c=1004 
+        I_HUB.d=1005
+    @classmethod 
+    def m2(cls):
+        cls.e=1006 
+        I_HUB.f=1007
+    @staticmethod 
+    def m3():
+        I_HUB.g=1008 
+        I_HUB.h=1009
+i=I_HUB()
+print(I_HUB.__dict__)
+print()
+i.m1()
+print(I_HUB.__dict__)
+print()
+i.m2()
+print(I_HUB.__dict__)
+print()
+i.m3()
+print()
+print(I_HUB.__dict__)
+I_HUB.m=1011
+I_HUB.n=1012
+print()
+print(I_HUB.__dict__)
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+->Accessing or printing:
+===================
+Ex1:
+----
+import time 
+class I_HUB:
+    def __init__(self):
+        I_HUB.a=1002 
+        I_HUB.b=1003  
+        print(I_HUB.a,I_HUB.b)
+    def m1(self):
+        I_HUB.c=1003 
+        I_HUB.d=1004 
+        print(I_HUB.c,I_HUB.d)    
+    @classmethod 
+    def m2(cls):
+        I_HUB.e=1005
+        cls.f=1008
+        print(I_HUB.e,cls.f)
+       
+    @staticmethod 
+    def m3():
+        I_HUB.g=1010
+        I_HUB.i=1015 
+        print(I_HUB.g,I_HUB.i) 
+i=I_HUB()
+print()
+i.m1()
+print()
+i.m2()
+print()
+i.m3()
+print()
+I_HUB.k=1019
+print(I_HUB.k)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+->Deleting :
+=========
+We can delete the static variable using del keyword followed by static varible name.
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        I_HUB.a=1002 
+        I_HUB.b=1003  
+        del I_HUB.b
+    
+    def m1(self):
+        I_HUB.c=1003 
+        I_HUB.d=1004 
+        del I_HUB.c
+        
+    @classmethod 
+    def m2(cls):
+        I_HUB.e=1005
+        cls.f=1008
+        del cls.f
+    
+       
+    @staticmethod 
+    def m3():
+        I_HUB.g=1010
+        I_HUB.i=1015 
+        del I_HUB.i
+      
+i=I_HUB()
+print(I_HUB.__dict__)
+print()
+i.m1()
+print(I_HUB.__dict__)
+print()
+i.m2()
+print(I_HUB.__dict__)
+print()
+i.m3()
+print(I_HUB.__dict__)
+I_HUB.s1=12000
+I_HUB.s2=23000
+del I_HUB.s2 
+print(I_HUB.__dict__)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Updating:
+==========
+Ex1:
+----
+import time 
+class I_HUB:
+    emp_id=1001
+    def __init__(self):
+        I_HUB.emp_id=1002 
+    def m1(self):
+        I_HUB.emp_id=1003
+    @classmethod 
+    def m2(cls):
+        I_HUB.emp_id=1004 
+    @staticmethod 
+    def m3():
+        I_HUB.emp_id=1005 
+i=I_HUB()
+I_HUB.emp_id=1006 
+print("The final employee id is:",I_HUB.emp_id)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+Local variable:
+===========
+We can define or declare local variable within the methods.The scope of the local variable within
+the method.
+
+Ex1:
+====
+import time 
+class I_HUB:
+    def __init__(self):
+        emp_id=1001
+        print("Employee_Id is:",emp_id)
+    def m1(self):
+        emp_name="Harish Kumar"
+        print("Employee_Name is:",emp_name)
+    @classmethod 
+    def m2(self):
+        emp_sal=42500 
+        print("Employee_Salary is:",emp_sal)
+    @staticmethod
+    def m3():
+        emp_design="Django Developer"
+        emp_company="TCS"
+        print("Employee_Designation is:",emp_design)
+        print("Employee_Company is:",emp_company)
+i=I_HUB()
+i.m1()
+i.m2()
+i.m3()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+    
+
+
+       
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+     
+
+
+

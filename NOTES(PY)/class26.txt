@@ -1,0 +1,294 @@
+GC in python:
+===========
+GC stands for garbage collector.The main objective of GC module is destroy the useless objects.
+GC is predefine module which is bydefualt enabled.
+
+
+What is usefull object?
+An object which is pointing the class then it is said to be usefull object
+
+class A:
+      ----
+      ----
+a=A() ----->Usefull object
+
+
+What is useless object?
+An object which is not pointing to to an object then it is said to be useless object
+
+class A:
+      ----
+      ----
+a=A() ----->Usefull object
+a=None
+or del a ----->Useless object
+
+
+destructor in python:
+================
+It is a specail method in python.The main objective of destrcutor is meant for cleanup activity 
+of the memory allocation where object is considered useless object t0 clean that object.We can
+define or declare destructor as follows.
+
+def __del__(self):
+            -----
+            -----
+
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+t1=I_HUB()
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+Ex2:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+    def __del__(self):
+        print("For cleanup activity for memory allocation")
+t1=I_HUB()
+t1=None
+print()
+time.sleep(5)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+    def __del__(self):
+        print("For cleanup activity for memory allocation")
+t1=I_HUB()
+del t1
+print()
+time.sleep(5)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+    def __del__(self):
+        print("For cleanup activity for memory allocation")
+t1=I_HUB()
+t2=t1 
+t3=t2 
+t4=t3 
+t5=t4
+del t1
+time.sleep(2)
+print("t1 ref is gone object is there")
+del t2
+time.sleep(2)
+print("t2 ref is gone object is there")
+del t3
+time.sleep(2)
+print("t3 ref is gone object is there")
+del t4
+time.sleep(2)
+print("t4 ref is gone object is there")
+del t5
+print()
+print()
+time.sleep(5)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+    def __del__(self):
+        print("For cleanup activity for memory allocation")
+t1=I_HUB()
+t1=None
+t2=t1 
+t3=t2 
+t4=t3 
+t5=t4
+del t1
+time.sleep(2)
+print("t1 ref is gone object is there")
+del t2
+time.sleep(2)
+print("t2 ref is gone object is there")
+del t3
+time.sleep(2)
+print("t3 ref is gone object is there")
+del t4
+time.sleep(2)
+print("t4 ref is gone object is there")
+del t5
+print()
+print()
+time.sleep(5)
+print("End of an application ...")
+
+
+Ex6:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+    def __del__(self):
+        print("For cleanup activity for memory allocation")
+t1=[I_HUB(),I_HUB(),I_HUB(),I_HUB(),I_HUB()]
+t1=None
+print()
+time.sleep(5)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor ...")
+    def __del__(self):
+        print("For cleanup activity for memory allocation")
+t1=[I_HUB(),I_HUB(),I_HUB(),I_HUB(),I_HUB()]
+del t1
+print()
+time.sleep(5)
+print("End of an application ...")
+
+
+Inner classes:
+===========
+Python supports Inner classes or nested classes.We can represent inner classes as if we are
+defining or declare a class inside another class then it is said to be inner classes or nested classes.
+
+
+Without existing object type of object there is no chance of exisiting another type of object then 
+we can go inner classes or nested classes
+
+
+class Car:
+      -----
+      -----
+     class Engine:
+              ----
+              ----
+class Univercity:
+                ----
+                 ----
+               class College:
+                       ----
+                      -----
+
+
+Ex1:
+===
+import time 
+class Car:
+    print("Car Imp ....")
+    class Engine:
+        print("Engine imp ...")
+        def m1(self):
+            print("Engine first service ...")
+c=Car()
+e=c.Engine()
+e.m1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class Car:
+    print("Car Imp ....")
+    class Engine:
+        print("Engine imp ...")
+        def m1(self):
+            print("Engine first service ...")
+c=Car().Engine().m1()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Name of the employee is:Rahul Reddy
+Date of birth is:19/7/1995
+
+Ex3:
+===
+import time 
+class Employees:
+    def __init__(self):
+        self.name="Rahul Reddy"
+        self.dob=self.DOB() 
+    def m1(self):
+        print("Name of the employee is:",self.name)
+        self.dob.m2()
+    class DOB:
+        def __init__(self):
+            self.day=19
+            self.month=7
+            self.year=1995 
+        def m2(self):
+            print("Date of birth is:{}/{}/{}".format(self.day,self.month,self.year))
+e1=Employees()
+e1.m1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+class Robot:
+    def __init__(self):
+        self.name="Chitti"
+        self.head=self.HEAD()
+    def m1(self):
+        print("Name of the robot is:",self.name)
+        self.head.talk()
+        self.head.microchip.think()
+    class HEAD:
+        def __init__(self):
+            self.microchip = self.MicroChip()
+        def talk(self):
+            print("Chitti is talking ....")
+        class MicroChip:
+            def think(self):
+                print("Chitti is thinking ...")
+r1=Robot()
+r1.m1()
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+
+
+
+
+
+
+
+
+

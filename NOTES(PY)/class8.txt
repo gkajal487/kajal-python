@@ -1,0 +1,390 @@
+Bytes data type:
+============
+Python supports bytes data type.The main objective of bytes data type is work on audio,video,
+semi structure files(JSON,XML) or normal text file.bytes  data is immutable object.While working
+bytes data type the range must be from 0 to 256-1=255
+
+Ex1:
+====
+import time
+l1=[100,120,111,145,176,345]
+l2=bytes(l1)
+print(l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+====
+import time
+l1=[100,120,111,145,176,255]
+l2=bytes(l1)
+print(l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time
+l1=[100,120,111,145,176,255]
+l2=bytes(l1)
+print(*l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex4:
+===
+import time
+l1=[100,120,111,145,176,255]
+l2=bytes(l1)
+for a in l2:
+    time.sleep(1)
+    print(a)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+from audioop import lin2adpcm
+import time 
+print('---Before immutable opertion---')
+l1=[1,2,3,4,5,6]
+l2=bytes(l1)
+print(*l2)
+print()
+print(type(l2))
+print()
+print("---After mutable operation---")
+l2[0]=112
+print(l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+OUTPUT:
+=======
+---Before immutable opertion---
+1 2 3 4 5 6
+
+<class 'bytes'>
+
+---After mutable operation---
+Traceback (most recent call last):
+  File "test1.py", line 11, in <module>
+    l2[0]=112
+TypeError: 'bytes' object does not support item assignment
+
+Byte array data type:
+=================
+Python supports byte array data type.It is exactly same as bytes data type but byte array is a 
+mutable object.
+
+Ex1:
+===
+import time 
+l1=[1,2,3,4,5,6]
+l2=bytearray(l1)
+print(l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex2:
+===
+import time 
+l1=[1,2,3,4,5,6]
+l2=bytearray(l1)
+print(*l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+l1=[1,2,3,4,5,6]
+l2=bytearray(l1)
+for obj1 in l2:
+    time.sleep(1)
+    print(obj1)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+l1=[1,2,3,4,5,6]
+l2=bytearray(l1)
+print("--Before mutable operation--")
+print(*l2)
+print()
+print(type(l2))
+print()
+print("---After mutable operation---")
+l2[0]=111
+l2[1]=112
+l2[2]=255
+l2[3]=114
+l2[4]=115
+l2[5]=116
+print(*l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Frozenset data type:
+================
+Python supports frozenset data type.It is exactly same as set data type.frozenset is a immutable or stateless object.
+
+Ex1:
+==
+import time 
+s1={1,2,3,4,5,6,7,8,9,1,2,3}
+s2=frozenset(s1)
+print(s2)
+print()
+print(type(s2))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex2:
+===
+import time 
+s1={1,2,3,4,5,6,7,8,9,1,2,3}
+s2=frozenset(s1)
+print(s2)
+print()
+print(type(s2))
+s2[0]=111
+print(s2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+Range data type:
+=============
+Python supports range data type.The main objective of range data type it generate the sequence 
+of number or decimal number.range data type always assocaited with for loop and while loop
+
+for x in range(begin,end(end-1),step):
+     ----
+      ----
+
+form1:
+=====
+for x in range(10):
+       ---
+       ---
+
+Ex1:
+----
+import time 
+for x in range(10):
+    print(x)
+print()
+time.sleep(1)
+print('End of an application ..')
+
+
+form2
+=====
+for x in range(1,7):
+      ----
+      ----
+
+Ex1:
+===
+import time  
+for a in range(1,7):
+    print(a)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+form3:
+=====
+for b in range(1,4,1):
+      -----
+       ----
+
+Ex1:
+===
+import time 
+for b in range(1,4,1):
+    print(b)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+----
+import time 
+print("---Even numbers---")
+for x in range(0,10,2):
+    print(x)
+print()
+print("---Odd numbers---")
+for y in range(1,10,2):
+    print(y)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex3:
+===
+import time 
+for x in "Django":
+    print(x)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+for a in range("REST API'S"):
+    print(a)
+print()
+time.sleep(1)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+for a in range(True):
+    print(a)
+print()
+time.sleep(1)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+for a in range(False):
+    print(a)
+print()
+time.sleep(1)
+print("End of an application")
+
+Ex7:
+===
+import time 
+for x in range(7):
+    print("I would be a software developer one day ...")
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex8:
+===
+import time 
+for x in range(5):
+    print("RRR")
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex9:
+===
+import time 
+for x in range(1+True+True-False,15+False+True,3+True+False):
+    print(x)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex10:
+===
+import time 
+for x in range(123.56):
+    print(x)
+
+
+Ex11:
+====
+import time 
+for x in range(5,15,-3):
+    print(x)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+None data type:
+============
+Python supports none data type.Which means nothing or empty.
+
+Ex1:
+===
+import time 
+emp_sal=45000 
+print(emp_sal)
+print()
+print(type(emp_sal))
+print()
+emp_sal=None 
+print(emp_sal)
+print()
+print(type(emp_sal))
+emp_sal=55000
+print(emp_sal)
+print()
+print(type(emp_sal))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+

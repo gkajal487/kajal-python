@@ -1,0 +1,617 @@
+Working on random module 
+======================
+It is a predefine module in pyhton.The main objective of random module is generate the random 
+objects as per the application requirement.It is used in gaming development.
+
+Ex1:
+===
+import time 
+from random import * 
+print("---SUB MODULES IN RANDON---")
+print(dir(random))
+print("-----------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+random():
+=======
+It is a predefine function in random module.The main objective of random function is generate the values from 0.0 to 1.1 .
+
+
+Ex1:
+===
+import time 
+from random import * 
+for x in range(10):
+    time.sleep(1)
+    print(random())
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+randint():
+-----------
+It is a predefine function in random module.The main objective of randint() function is generate the random numbers from given position to til end position.
+
+Ex1:
+===
+import time 
+from random import *
+print("----Random OTP numbers----") 
+for x in range(10):
+    time.sleep(1)
+    print(randint(1,100000))
+print()
+time.sleep(3)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+from random import *
+print("----Random 10 digit numbers----") 
+for x in range(10):
+    time.sleep(1)
+    print(randint(1,10000000000))
+print()
+time.sleep(3)
+print("End of an application ...")
+
+
+
+randrange():
+==========
+It is a predefine function in python.The main objective of randrange() is generate the random python object as per the application requirement.
+
+
+Ex1:
+===
+import time 
+from random import *
+print("----Single digit random number----") 
+for x in range(10):
+    time.sleep(1)
+    print(randrange(10))
+print()
+time.sleep(3)
+print("End of an application ...")
+
+
+Ex2:
+====
+import time 
+from random import *
+print("----Single digit random number----") 
+for x in range(10):
+    time.sleep(1)
+    print(randrange(2,10))
+print()
+time.sleep(3)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+from random import *
+print("----Single digit random number----") 
+for x in range(10):
+    time.sleep(1)
+    print(randrange(2,10,1))
+print()
+time.sleep(3)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+from random import *
+print("---Random even numbers----")
+for x in range(10):
+    time.sleep(1)
+    print(randrange(0,10,2))
+print()
+print("---Random Odd number---")
+for x1 in range(10):
+    time.sleep(1)
+    print(randrange(1,10,2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+uniform():
+========
+It is a predefine function in random module.The main objective of uniform() function is generate
+the floating random numbers from given to end position.
+
+
+Ex1:
+===
+import time 
+from random import *
+print("---Random Floatng number----")
+for x in range(10):
+    time.sleep(1)
+    print(uniform(3,15))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+choice():
+=======
+It is a predefine function in random module.The main objective of chioce() function is generate the string random objects as per the application requirement.
+
+
+Ex1:
+===
+import time 
+from random import *
+print('----Random string object----')
+l1_items=['Apple','Orange','Water millan','Banana','Graps']
+for x in range(10):
+    time.sleep(1)
+    print(choice(l1_items))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+numpy:
+======
+It is a predefine module in python.The main objective of numpy is work on zero or more than one
+daimention array.It is mainly deals with data science application.
+
+
+ON CMD  ----> pip install numpy
+
+
+Ex1:
+===
+import time 
+import numpy as np 
+print("---SUB MODULES IN NUMPY---")
+print(dir(np))
+print("------------")
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex2:
+===
+import time 
+import numpy as np 
+d1=np.array(0)
+print("The values in 0 diamention:",d1)
+print()
+print("The daimention is:",d1.ndim)
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex3:
+===
+import time 
+import numpy as np 
+d1=np.array([1000,2000,3000,4000,5000,6000])
+print("The values are:",d1)
+print()
+print("The daimention is:",d1.ndim)
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex4:
+===
+import time 
+import numpy as np 
+d1=np.array([1000,2000,3000,4000,5000,6000])
+print()
+print("---Using indexing----")
+print(d1[0],d1[1],d1[2],d1[3],d1[4],d1[5])
+print("---------------")
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+Ex5:
+===
+import time 
+import numpy as np 
+d1=np.array([1000,2000,3000,4000,5000,6000])
+print()
+print("---Using Slice operator----")
+print(d1[0::])
+print(d1[::-1])
+print(d1[1:4:1])
+print(d1[1:5:2])
+print("---------------")
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time 
+import numpy as np 
+d1=np.array([[100,200,300,400,500],[100,200,300,400,500]])
+print()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+import numpy as np 
+d1=np.array([[100,200,300,400,500],[100,200,300,400,500]])
+print()
+print(d1[0][0])
+print(d1[0][1])
+print()
+print(d1[1][1])
+print(d1[1][2])
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex8:
+===
+import time 
+import numpy as np 
+d1=np.array([[[[100,200,300,400,500],[100,200,300,400,500]]]])
+print()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex9:
+===
+import time 
+import numpy as np 
+d1=np.array([[[[100,200,300,400,500],[100,200,300,400,500]]]])
+print()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+for a in d1:
+    for b in a:
+        for c in b:
+            for d in c:
+                print(d,end=" ")
+            print()
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex10:
+====
+import time 
+import numpy as np 
+d1=np.array([[100,200,300,400,500],[100,200,300,400,700]])
+print()
+d2=d1.shape
+print(d2)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex11:
+===
+import time 
+import numpy as np 
+d1=np.array([100,200,300,400,500,100,200,300,400,700])
+print()
+d2=d1.reshape(5,2)
+print(d2)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex12:
+====
+import time 
+import numpy as np 
+d1=np.array([100,200,300,400,500,100,200,300,400,700])
+print()
+d2=d1.reshape(2,5)
+print(d2)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex13:
+===
+import time 
+import numpy as np 
+d1=np.array([100,200,300,400,500],ndmin=7)
+print()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex14:
+====
+import time 
+import numpy as np 
+d1=np.array([['A','B','C'],['a','b','c']],ndmin=7)
+print()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+for  a in d1:
+    for b in a:
+        for c in b:
+            for d in c:
+                for e in d:
+                    for f in e:
+                        for g in f:
+                            print(g,end=" ")
+                        print()
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+Pandas 
+======
+It is a predefine in python.The main objective of pandas libary or module is to work on data science application.Pandas is genrate the data or information into rows and columns format or 
+tabular format using DataFrame object.
+
+
+ON CMD --->pip/pip3 install pandas 
+
+
+Ex1:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+print("---SUB MODULES IN PANDAS---")
+print(dir(pd))
+print("------------------------")
+print()
+print("----SUB MODULES IN NUMPY----")
+print(dir(np))
+print("-------------------")
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex2:
+====
+import time 
+import numpy as np 
+import pandas as pd 
+d1=pd.DataFrame()
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+====
+import time 
+import numpy as np 
+import pandas as pd 
+d1=pd.DataFrame(['A','B','C','D','E','F'])
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+====
+import time 
+import numpy as np 
+import pandas as pd 
+d1=pd.DataFrame([['A','B','C','D','E','F'],['A','B','C','D','E','F']])
+print(d1)
+print()
+print("The daimentions are:",d1.ndim)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+Ex5:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Mahesh",34500,"DAD","TM"],[1002,"Satish",54500,"Sr DAD","Infosys"],[1003,"Kajal",32500,"DS","D-MAC"],[1004,"Rahul",30500,"DAD","CG"],[1005,"Atul ",75500,"Sr DAD","IBM"]]
+d1=pd.DataFrame(data)
+print("-----------------")
+print(d1)
+print("---------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Mahesh",34500,"DAD","TM"],[1002,"Satish",54500,"Sr DAD","Infosys"],[1003,"Kajal",32500,"DS","D-MAC"],[1004,"Rahul",30500,"DAD","CG"],[1005,"Atul ",75500,"Sr DAD","IBM"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'])
+print("-----------------")
+print(d1)
+print("---------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Mahesh",34500,"DAD","TM"],[1002,"Satish",54500,"Sr DAD","Infosys"],[1003,"Kajal",32500,"DS","D-MAC"],[1004,"Rahul",30500,"DAD","CG"],[1005,"Atul ",75500,"Sr DAD","IBM"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4','B5'])
+print("-----------------")
+print(d1)
+print("---------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,402 @@
+Composition and Aggregation
+========================
+
+Composition:
+==========
+Composition can be represent as the relationship between an instance variable and object 
+then it is said to be composition or strong relationship or has a relationship.
+
+Aggregation:
+==========
+Aggregation can be represent as the relationship between an static variable and object 
+then it is said  to be aggregation or weak relationship or is a relationship..
+
+Ex1:
+----
+import time 
+class I_HUB:
+    company_name="Wiprotechnology"
+    def __init__(self,eid,ename,esal,design):
+        self.eid=eid 
+        self.ename=ename 
+        self.esal=esal 
+        self.design=design 
+    def m1(self):
+        print("----Employee Information----")
+        print("Eid is:",self.eid)
+        print("Ename is:",self.ename)
+        print("Esal is:",self.esal)
+        print('Design is:',self.design)
+i1=I_HUB(1001,"Rahul Reddy",36000,"DAD")
+i1.m1()
+print("Company name is:",I_HUB.company_name)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+  
+
+
+Inheritance in python:
+=================
+Python supports inheritance.It is process or methodlogy to extend from one class to another 
+class as per the application requirement.Th main objective of inheritance is provide the code reusability.Following types inheritance in python
+
+->Single inheritance
+->Multilevel Inheritance
+->Hiechical Inheritance
+->Multiple Inheritance 
+->Hybrid Inheritance
+
+
+->Single inheritance:
+==================
+Python supports single inheritance.It is the process or methodlogy to one parent class with only
+single child class then it is said to single inheritance
+
+
+class Father_class:
+        ------
+        ------
+class Child_Class(Father_Class):
+                -----
+                -----
+
+
+Ex1:
+===
+import time 
+class QT_Class:
+    def m1(self):
+        print("This is parent company ...")
+class I_HUB(QT_Class):
+    def m2(self):
+        print("This is child  company ...")
+print()
+q1=QT_Class()
+q1.m1()
+print()
+i1=I_HUB()
+i1.m1()
+i1.m2()
+print()
+time.sleep(2)
+print('End of an application ..')
+
+->Multilevel Inheritance:
+===================
+Python supports multilevel inheritance.It is process or methodlogy to extend from one class to 
+another class continously as per the application requirement.
+
+class A_class:
+             ----
+            -----
+class B_class(A_class):
+             -----
+            ------
+class C_class(B_class):
+             ----
+            -----
+class D_class(C_class):
+             ----
+             ----
+
+
+Ex1:
+===
+import time 
+class QT_Class:
+    def m1(self):
+        print("This is parent company ...")
+class I_HUB1(QT_Class):
+    def m2(self):
+        print("This is I_HUB1 one class")
+class I_HUB2(I_HUB1):
+    def m3(self):
+        print("This is I_HUB two class")
+class I_HUB3(I_HUB2):
+    def m4(self):
+        print("This is I_HUB three class")
+i1=I_HUB3()
+i1.m1()
+i1.m2()
+i1.m3()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Hiechical Inheritance:
+===================
+Python supports HI.It is process or methodlogy with parent class with more than one child class
+then it is said HI.
+
+
+class Father_Class:
+                   -----
+                   ----
+class Child1_Class(Father_Class):
+                  ----
+                  ----
+class Child2_Class(Father_Class):
+                  ---
+                 ----
+class Child3_Class(Father_Class):
+                 ----
+                -----
+
+
+Ex1:
+===
+import time 
+class Father_Class:
+    def m1(self):
+        print("This is Father class ...")
+class Child1_Class(Father_Class):
+    def m2(self):
+        print("This is child one class ...")
+class Child2_Class(Father_Class):
+    def m3(self):
+        print("This is child two class")
+class Child3_Class(Father_Class):
+    def m4(self):
+        print("This is child three class ...")
+c1=Child1_Class()
+c1.m1()
+c1.m2()
+print()
+c2=Child2_Class()
+c2.m1()
+c2.m3()
+print()
+c3=Child3_Class()
+c3.m1()
+c3.m4()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Multiple Inheritance :
+==================
+Python supports multiple inheritance.It is the process or methodlogy to one child class with more than one parent class.
+
+class Parent1_class:
+                   ----
+                   ----
+class Parent2_class:
+                   ----
+                   ----
+class Parent3_class:
+                 ----
+                 -----
+class Parent4_class:
+               ----
+                ----
+class Child1_Class(Parent1_class,Parent2_class,Parent3_class,Parent4_class):
+                   ----
+                   ----
+
+
+Ex1:
+===
+import time 
+class Parent1_Class:
+    def m1(self):
+        print("Parent one class ...")
+class Parent2_class:
+    def m2(self):
+        print("Parent two class ...")
+class Parent3_class:
+    def m3(self):
+        print("Parent3 class ...")
+class Parent4_class:
+    def m4(self):
+        print("Parent four class ...")
+class Child1_class(Parent1_Class,Parent2_class,Parent3_class,Parent4_class):
+    def m5(self):
+        print("Child one class ...")
+c1=Child1_class()
+c1.m1()
+c1.m2()
+c1.m3()
+c1.m4()
+c1.m5()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+If the methods are we can implement MI using MRO algorithm.Method resulation order.As per 
+MRO algorithm if the methods are same first it will search in its child class.If there is no implementation is there it will based on the order how you have provides in your python script.
+
+If there are combination of inheritance are then it will follow the left to right methodlogy
+
+
+Ex1:
+===
+import time 
+class Parent1_Class:
+    def m1(self):
+        print("Parent one class ...")
+class Parent2_class:
+    def m1(self):
+        print("Parent two class ...")
+class Parent3_class:
+    def m1(self):
+        print("Parent3 class ...")
+class Parent4_class:
+    def m1(self):
+        print("Parent four class ...")
+class Child1_class(Parent1_Class,Parent2_class,Parent3_class,Parent4_class):
+    def m1(self):
+        print("Child one class ...")
+c1=Child1_class()
+c1.m1()
+
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class Parent1_Class:
+    def m1(self):
+        print("Parent one class ...")
+class Parent2_class:
+    def m1(self):
+        print("Parent two class ...")
+class Parent3_class:
+    def m1(self):
+        print("Parent3 class ...")
+class Parent4_class:
+    def m1(self):
+        print("Parent four class ...")
+class Child1_class(Parent1_Class,Parent2_class,Parent3_class,Parent4_class):pass
+ 
+c1=Child1_class()
+c1.m1()
+
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex3:
+====
+import time 
+class Parent1_Class:pass
+class Parent2_class:
+    def m1(self):
+        print("Parent two class ...")
+class Parent3_class:
+    def m1(self):
+        print("Parent3 class ...")
+class Parent4_class:
+    def m1(self):
+        print("Parent four class ...")
+class Child1_class(Parent1_Class,Parent2_class,Parent3_class,Parent4_class):pass
+ 
+c1=Child1_class()
+c1.m1()
+
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+class Parent1_Class:pass
+class Parent2_class:pass
+class Parent3_class:
+    def m1(self):
+        print("Parent3 class ...")
+class Parent4_class:
+    def m1(self):
+        print("Parent four class ...")
+class Child1_class(Parent1_Class,Parent2_class,Parent3_class,Parent4_class):pass
+ 
+c1=Child1_class()
+c1.m1()
+
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Hybrid Inheritance:
+================
+Python supports Hybrid inheritance.It is the combination of single,multilevel,hiechical,multiple
+inheritance.
+
+
+mro():
+=====
+It is a predefine function in python.The main objective of this function is know the mro of particular class.
+
+
+Ex1:
+===
+import time 
+class A:pass
+class B(A):pass 
+class C(A):pass 
+class D(B,C):pass 
+print()
+print("---Mro of A class---")
+print(A.mro())
+print()
+print("---Mro of B class----")
+print(B.mro())
+print()
+print("---Mro of C class---")
+print(C.mro())
+print()
+print("----Mro of D class---")
+print(D.mro())
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class A:pass 
+class B:pass 
+class C:pass 
+class X(A,B):pass 
+class Y(B,C):pass 
+class P(X,Y,C):pass 
+print()
+print("----Mro of A class---")
+print(A.mro())
+print()
+print("---Mro of B class ---")
+print(B.mro())
+print()
+print("---Mro of C class ---")
+print(C.mro())
+print()
+print('---Mro of X class----')
+print(X.mro())
+print()
+print("---Mro of Y class ---")
+print(Y.mro())
+print()
+print("---Mro of P class---")
+print(P.mro())
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+    
+
+
+
+

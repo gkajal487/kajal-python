@@ -1,0 +1,11 @@
+import time
+f=open("number.txt")
+print("---file information---")
+print("name of the file",f.name)
+print("mode of the file is",f.mode)
+print("the file is closed or not",f.closed)
+print("the file is readable or not",f.readable())
+print("the file is writable or not",f.writable())
+print()
+time.sleep(2)
+print("end of an application")

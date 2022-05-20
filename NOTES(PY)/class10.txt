@@ -1,0 +1,411 @@
+Equality operators:
+==============
+Python supports EO.The main objective of EO is meant for content comparision.It  returns boolean values either True or False after checking the condition.Following are the EO in python
+
+->==
+->!=
+
+
+Ex1:
+===
+import time
+from tkinter import Y 
+x1=eval(input('Enter the value of x1:'))
+y1=eval(input('Enter the value of y1:'))
+print()
+print("---Using EO ---")
+res1=x1==y1 
+print("The result is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+res2=x1!=y1
+print("The result is:",res2) 
+print()
+print("The data type is:",type(res2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+OUTPUT:
+=======
+nter the value of x1:1000
+Enter the value of y1:2000
+
+---Using EO ---
+The result is: False
+
+The data type is: <class 'bool'>
+
+The result is: True
+
+The data type is: <class 'bool'>
+
+End of an application ...
+
+
+Comparision operator:
+=================
+Python supports CO.The main objective of CO is to compare the some operands as per the application requirement.It returns either True or False after checking the condition.Following
+are the CO in python
+
+-> >
+-> >=
+-><
+-><=
+
+
+Ex1:
+===
+import time
+x1=input('Enter the value of x1:')
+y1=input('Enter the value of y1:')
+print()
+print("---Using CO ---")
+res1=x1>y1 
+print("The result is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+res2=x1>=y1
+print("The result is:",res2) 
+print()
+print("The data type is:",type(res2))
+res3=x1<y1 
+print("The result is:",res3)
+print()
+print("The data type is:",type(res3))
+print()
+res4=x1<=y1
+print("The result is:",res4) 
+print()
+print("The data type is:",type(res4))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time
+x1=int(input('Enter the value of x1:'))
+y1=int(input('Enter the value of y1:'))
+print()
+print("---Using CO ---")
+res1=x1>y1 
+print("The result is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+res2=x1>=y1
+print("The result is:",res2) 
+print()
+print("The data type is:",type(res2))
+res3=x1<y1 
+print("The result is:",res3)
+print()
+print("The data type is:",type(res3))
+print()
+res4=x1<=y1
+print("The result is:",res4) 
+print()
+print("The data type is:",type(res4))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Chaining operator:
+==============
+Python supports chaining operator.The main objective of chaining operator is provide the complex solution in our application.While chaining operator if one of the condition is false
+than complete result would be false.
+
+a=50
+b=40
+c=30
+d=20
+e=10
+res1=a>b>c>d>e
+
+
+Ex1:
+===
+import time 
+a=int(input("Enter the value  of a:"))
+b=int(input("Enter the value of b:"))
+c=int(input("Enter the value  of c:"))
+d=int(input("Enter the value of d:"))
+e=int(input("Enter the value of e:"))
+res1=a>b>c>d>e 
+print("The result with chaining operator is:",res1)
+print()
+print(type(res1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+a=int(input("Enter the value  of a:"))
+b=int(input("Enter the value of b:"))
+c=int(input("Enter the value  of c:"))
+d=int(input("Enter the value of d:"))
+e=int(input("Enter the value of e:"))
+res1=a>b<c>d>e 
+print("The result with chaining operator is:",res1)
+print()
+print(type(res1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex3:
+===
+import time 
+a=int(input("Enter the value  of a:"))
+b=int(input("Enter the value of b:"))
+c=int(input("Enter the value  of c:"))
+d=int(input("Enter the value of d:"))
+e=int(input("Enter the value of e:"))
+res1=a==b==c==d==e 
+print("The result with chaining operator is:",res1)
+print()
+print(type(res1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Specail type of operator:
+====================
+Python supports specail type of operator.Following are the STO in python
+
+->Identity operator
+->Membership operator
+
+->Identity operator:
+===============
+It is a STO in python.The main objective of identity operator is meant for address comparsion.It will addresses if the address is same it return True otherwsise False.Following are the identity
+operator.
+
+->is operator
+->is not operator
+
+
+Ex1:
+===
+import time 
+l1=['A','B','C','D']
+l2=['A','B','C','D']
+print()
+print("---List object---")
+print(l1)
+print()
+print(l2)
+print()
+print("---Addresses---")
+print(id(l1))
+print()
+print(id(l2))
+print()
+print()
+print("---Using IO---")
+print(l1 is l2)
+print()
+print(l1 is not l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+l1='A','B','C','D'
+l2='A','B','C','D'
+print()
+print("---List object---")
+print(l1)
+print()
+print(l2)
+print()
+print("---Addresses---")
+print(id(l1))
+print()
+print(id(l2))
+print()
+print()
+print("---Using IO---")
+print(l1 is l2)
+print()
+print(l1 is not l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+EX3:
+====
+import time 
+l1=(chr(65),chr(66),chr(67),chr(68))
+l2=('A','B','C','D')
+print()
+print("---List object---")
+print(l1)
+print()
+print(l2)
+print()
+print("---Addresses---")
+print(id(l1))
+print()
+print(id(l2))
+print()
+print()
+print("---Using IO---")
+print(l1 is l2)
+print()
+print(l1 is not l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+====
+import time 
+l1=1000
+l2=2000
+print()
+print("---List object---")
+print(l1)
+print()
+print(l2)
+print()
+print("---Addresses---")
+print(id(l1))
+print()
+print(id(l2))
+print()
+print()
+print("---Using IO---")
+print(l1 is l2)
+print()
+print(l1 is not l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+l1=1000
+l2=1000
+print()
+print("---List object---")
+print(l1)
+print()
+print(l2)
+print()
+print("---Addresses---")
+print(id(l1))
+print()
+print(id(l2))
+print()
+print()
+print("---Using IO---")
+print(l1 is l2)
+print()
+print(l1 is not l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+What is difference between ==  &  is operator
+
+== operator is ment for content comparision 
+is operator is meant for address comparision
+
+
+import time 
+l1=[12500,14500,16500,18500]
+l2=[12500,14500,16500,18500]
+print(id(l1))
+print()
+print(id(l2))
+print()
+print("---Using IO ---")
+print(l1 is l2)
+print()
+print("---Using EO---")
+print(l1==l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+import time 
+l1=[12500,14500,16500,18500]
+l2=[12500,14500,16500,1850]
+print(id(l1))
+print()
+print(id(l2))
+print()
+print("---Using IO ---")
+print(l1 is l2)
+print()
+print("---Using EO---")
+print(l1==l2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+import time 
+l2=2000
+l2=4000
+print()
+print(id(l2))
+print()
+print(id(l2))
+print()
+print(l2 is l2)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Membership operator:
+=================
+It is a STO in python.The main objective of membership is search for single character or more than one character or paragraph.It return boolean values eitherTrue or False.Following are 
+the membership operator.
+
+->in 
+->not in
+
+
+import time 
+str1=input("Enter the string here:") # I will be a software developer 
+print(str1)
+print()
+print(type(str1))
+print()
+print("---Using membership operator---")
+print('I' in str1)
+print()
+print(' ' in str1)
+print()
+print('Django' not in str1)
+print()
+print('Flask' in str1 )
+print()
+print('Developer' in str1)
+
+
+
+
+
+

@@ -1,0 +1,511 @@
+Nested while loop:
+==============
+Python supports nested while loop.If you want to execute number of statements number of times if our data not in sequence.Nested while is also known as inner while loop which means
+defining or declaring a while loop inside another while loop then it is said to be nested while loop
+or inner while loop.
+
+Syntax:
+---------
+val1=0
+while(cond):
+         -----
+         -----
+        while(cond):
+                ----
+               ----
+
+0
+0
+1
+2
+1
+0
+1
+2
+2
+0
+1
+2
+
+
+Ex1:
+===
+import time 
+i=0 
+while(i<3):
+    print(i)
+    j=0 
+    while(j<3):
+        print(j)
+        j+=1 
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+0---0
+0---1
+0---2
+1---0
+1---1
+1--2
+2---0
+2---1
+2---2
+
+
+Ex2:
+----
+import time 
+i=0 
+while(i<3):
+   
+    j=0 
+    while(j<3):
+        print(i,"---",j)
+        j+=1 
+    i+=1 
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+
+[1,2,3]
+1
+2
+3
+[4,5,6]
+4
+5
+6
+[7,8,9]
+7
+8
+9
+
+
+Ex3:
+===
+import time 
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+print(l1)
+print()
+i=0 
+while(i<len(l1)):
+    print(l1[i])
+    j=0
+    while(j<len(l1[i])):
+        print(l1[i][j])
+        j+=1 
+    i+=1 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Ex4:
+===
+import time 
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+print(l1)
+print()
+i=0 
+while(i<len(l1)):
+    j=0
+    while(j<len(l1[i])):
+        print(l1[i][j])
+        j+=1 
+    i+=1 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+
+1  2  3
+4  5  6
+7  8  9
+
+Ex5:
+-----
+import time 
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+print(l1)
+print()
+i=0 
+while(i<len(l1)):
+    j=0
+    while(j<len(l1[i])):
+        print(l1[i][j],end=" ")
+        j+=1 
+    print()
+    i+=1 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time
+i=1
+while(i<=10):
+    j=1 
+    while(j<=10):
+        print(i*j,end=" ")
+        j+=1
+    print()
+    i+=1
+print()
+time.sleep(2)
+print("End of an application ")
+
+
+Ex7:
+===
+import time
+i=1
+while(i<=10):
+    j=1 
+    while(j<=10):
+        print(i,"X",j,"=",i*j)
+        j+=1
+    print()
+    i+=1
+print()
+time.sleep(2)
+print("End of an application ")
+
+
+Transfer statements:
+=================
+Following are the transfer statements in python.
+
+->break
+->continue
+->pass
+
+
+->break:
+-----------
+Break is transfer statement in python.The main objective of break statement is control loops or to terminate the python script.break is always assocaited with iterative statement either for loop
+or while loop
+
+
+Ex1:
+===
+import time 
+for x in range(10):
+    if(x==8):
+        print("Dear user do you know rules ..")
+        break 
+    print("The values are:",x)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+list_items=[120,123,145,167,705,40,50,60,90]
+for a in list_items:
+    if(a>700):
+        print("Dear user you must required Card ...")
+        break 
+    print("The lit items are:",a)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+for with else block
+===============
+Python supports for with else block.The main objective of for with else block is break condition 
+is not satisfied then else block would be executed.
+
+
+Ex1:
+---
+import time 
+list_items=[120,123,145,167,705,40,50,60,90]
+for a in list_items:
+    if(a>700):
+        print("Dear user you must required Card ...")
+        break 
+    print("The lit items are:",a)
+else:
+    print("All list items are processed successfully ..")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+list_items=[120,123,145,167,40,50,60,90]
+for a in list_items:
+    if(a>700):
+        print("Dear user you must required Card ...")
+        break 
+    print("The lit items are:",a)
+else:
+    print("All list items are processed successfully ..")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+list_items=[1001,"Ravi Verma",705,"DAD","TM"]
+for a in list_items:
+    if(a>700):
+        print("Dear user you must required Card ...")
+        break 
+    print("The lit items are:",a)
+else:
+    print("All list items are processed successfully ..")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+list_items=[100,745,"Ravi Verma",705,"DAD","TM"]
+for a in list_items:
+    if(a>700):
+        print("Dear user you must required Card ...")
+        break 
+    print("The lit items are:",a)
+else:
+    print("All list items are processed successfully ..")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+continue:
+=======
+Continue is transfer statements in python.The main objective of continue statement is skip the 
+current iteation and continue for next iteration.
+
+Ex1:
+===
+import time 
+list_items=[120,123,145,167,40,705,50,60,90,1,2,3,4,5]
+for a in list_items:
+    if(a>700):
+        print("Dear user amazon card is optional...")
+        continue
+    print("The lit items are:",a)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+for x in range(10):
+    if(x%2==0):
+        continue 
+    print('Odd numbers are:',x)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex3:
+----
+import time 
+for x in range(10):
+    if(x%2==0):
+        continue 
+    else:
+        print("Odd numbers are:",x)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+pass statements:
+==============
+pass is a transfer statement in python.pass means empty or nothing
+
+def f1():
+     ----
+     ----
+f1()
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    pass 
+def Test_Case2():
+    pass 
+def Test_Case3():
+    pass 
+def Test_Case4():
+    pass 
+def Test_Case5():
+    pass 
+Test_Case1()
+Test_Case2()
+Test_Case3()
+Test_Case4()
+Test_Case5()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex2:
+====
+import time 
+def Test_Case1():
+    print('This is services one ...')
+def Test_Case2():
+    pass 
+def Test_Case3():
+    pass 
+def Test_Case4():
+    pass 
+def Test_Case5():
+    pass 
+Test_Case1()
+Test_Case2()
+Test_Case3()
+Test_Case4()
+Test_Case5()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex3:
+===
+import time 
+def Test_Case1():
+    pass
+def Test_Case2():
+    print("This is service two ...")
+def Test_Case3():
+    pass 
+def Test_Case4():
+    pass 
+def Test_Case5():
+    pass 
+Test_Case1()
+Test_Case2()
+Test_Case3()
+Test_Case4()
+Test_Case5()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex4:
+===
+import time 
+number=int(input("Enter the any number:"))
+if(number%2==0):
+    print(number,":IT IS EVEN NUMBER ...")
+else:
+    pass 
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+====
+import time 
+number=int(input("Enter the any number:"))
+if(number%2==0):
+    pass 
+else:
+    print(number,":It odd number")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time 
+for x in range(10):
+    print(x)
+    for y in range(10):
+        pass 
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex7:
+===
+import time 
+for x in range(10):
+    pass
+    for y in range(10):
+        print(y)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex8:
+===
+import time 
+for x in range(10):
+    print(x)
+    for y in range(10):
+        print(y)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

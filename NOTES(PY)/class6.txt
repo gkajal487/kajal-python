@@ -1,0 +1,433 @@
+Ex1:
+===
+import time 
+l1=[10,20,30,40,50]
+print(l1)
+print()
+print(type(l1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->Inseration is preserved
+->Duplicate objects are allowed
+->Hertrogenious objects are allowed
+->List is mutable object
+->List is dynamic or growable
+->Indexing and slice operator is applicable for list
+
+
+
+->Inseration is preserved:
+=====================
+
+Ex1:
+===
+import time 
+l1=eval(input('Enter the list data type:'))
+print(l1)
+print()
+print(type(l1))
+print('---Fetching the data from the list---')
+for abc in l1:
+    time.sleep(1)
+    print(abc)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+OUTPUT:
+=======
+Enter the list data type:[1,2,3,4,5,6]
+[1, 2, 3, 4, 5, 6]
+
+<class 'list'>
+---Fetching the data from the list---
+1
+2
+3
+4
+5
+6
+
+End of an application ...
+
+
+->Duplicate objects are allowed:
+=========================
+
+import time 
+l1=eval(input('Enter the list data type:'))
+print(l1)
+print()
+print(type(l1))
+print('---Fetching the data from the list---')
+for abc in l1:
+    time.sleep(1)
+    print(abc)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+OUTPUT:
+=======
+Enter the list data type:[1,2,3,4,5,1,2,3]
+[1, 2, 3, 4, 5, 1, 2, 3]
+
+<class 'list'>
+---Fetching the data from the list---
+1
+2
+3
+4
+5
+1
+2
+3
+
+End of an application ...
+
+->Hertrogenious objects are allowed
+=============================
+import time 
+l1=eval(input('Enter the list data type:'))
+print(l1)
+print()
+print(type(l1))
+print('---Fetching the data from the list---')
+for abc in l1:
+    time.sleep(1)
+    print(abc)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+OUTPUT:
+========
+Enter the list data type:[1001,'Mobile',25500.0,'Samsung']
+[1001, 'Mobile', 25500.0, 'Samsung']
+
+<class 'list'>
+---Fetching the data from the list---
+1001
+Mobile
+25500.0
+Samsung
+
+End of an application ...
+
+
+->List is mutable object:
+===================
+from pickletools import long1
+import time 
+l1=[10,20,30,40,50]
+print('---Before mutable object---')
+print(l1)
+print()
+print(type(l1))
+print()
+print('---After mutable object----')
+l1[0]=1000
+l1[1]=2000
+l1[2]=3000
+l1[3]=4000 
+l1[4]=5000 
+print(l1)
+print()
+print(type(l1))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT:
+=======
+---Before mutable object---
+[10, 20, 30, 40, 50]
+
+<class 'list'>
+
+---After mutable object----
+[1000, 2000, 3000, 4000, 5000]
+
+<class 'list'>
+
+End of an application ...
+
+
+->List is dynamic or growable:
+========================
+List is a dynamic or growable which means we can increase or decrease the size of the list.Using
+following function
+append():It is used to add one object at time
+remove():It is used to remove one object at time
+
+
+Ex1:
+===
+import time 
+l1=[]
+print(l1)
+print("---Adding the elements---")
+l1.append(1001)
+l1.append("Rahul")
+l1.append(56000.0)
+l1.append("TM")
+print(l1)
+print()
+print("---Removing the elements---")
+l1.remove(1001)
+l1.remove("Rahul")
+l1.remove(56000.0)
+l1.remove("TM")
+print(l1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Indexing and slice operator is applicable for list:
+========================================
+import time 
+product_info=[1001,"Mobile",24500.0,"Samsung","12-12-2021",'12-12-2022']
+print(product_info)
+print()
+print("---Product Information---")
+print("Pid is:",product_info[0])
+print("Pname is:",product_info[1])
+print("Price is:",product_info[2])
+print("Company is:",product_info[3])
+print("M_date is:",product_info[4])
+print("Exp_date is:",product_info[5])
+print("-------------------------")
+print()
+print("---Using slice operator---")
+print(product_info[0:])
+print(product_info[::-1])
+print(product_info[1:6])
+print(product_info[1:6:2])
+print("-------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+In real application list can be used in live transactions.List is very to insert or update or delete
+operation in real time application.
+
+Tuple data type:
+=============
+Python supports tuple data type.If you want to represent more than one object or group of objects as single entity than we can go with tuple data type.In python tuple data type can be
+rerpesent () and tuple().While working tuple data () are optional.
+
+Ex1:
+===
+import time 
+t1=()
+print(t1)
+print(type(t1))
+print()
+t2=tuple()
+print(t2)
+print(type(t2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+t1=(10)
+print(t1)
+print()
+print(type(t1))
+
+Ex3:
+===
+import time 
+t1=(10,)
+print(t1)
+print()
+print(type(t1))
+
+Ex4:
+===
+import time 
+t1=10,
+print(t1)
+print()
+print(type(t1))
+
+
+Ex5:
+===
+import time 
+t1=10,20.30,40
+print(t1)
+print()
+print(type(t1))
+
+
+->Inseration is preserved
+->Duplicate objects are allowed
+->Hertrogenious objects are allowed
+->tuple is immutable object
+->tuple is not dynamic or  not growable
+->indexing and slice operator is acceptable while working tuple data type.
+
+
+->Inseration is preserved:
+====================
+import time 
+t1=eval(input('Enter the list data type:'))
+print(t1)
+print()
+print(type(t1))
+print('---Fetching the data from the list---')
+for abc in t1:
+    time.sleep(1)
+    print(abc)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+OUTPUT:
+=======
+Enter the list data type:10,20,30
+(10, 20, 30)
+
+<class 'tuple'>
+---Fetching the data from the list---
+10
+20
+30
+
+End of an application ...
+
+C:\Users\HI\Desktop>Python test1.py
+Enter the list data type:(10,20,30)
+(10, 20, 30)
+
+<class 'tuple'>
+---Fetching the data from the list---
+10
+20
+30
+
+End of an application ...
+
+
+->Duplicate objects are allowed:
+===========================
+
+Ex1:
+===
+import time 
+t1=eval(input('Enter the list data type:'))
+print(t1)
+print()
+print(type(t1))
+print('---Fetching the data from the list---')
+for abc in t1:
+    time.sleep(1)
+    print(abc)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT:
+=======
+Enter the list data type:(10,20,30,10,20,30)
+(10, 20, 30, 10, 20, 30)
+
+<class 'tuple'>
+---Fetching the data from the list---
+10
+20
+30
+10
+20
+30
+
+End of an application ...
+
+
+->Hertrogenious objects are allowed:
+=============================
+import time 
+t1=eval(input('Enter the list data type:'))
+print(t1)
+print()
+print(type(t1))
+print('---Fetching the data from the list---')
+for abc in t1:
+    time.sleep(1)
+    print(abc)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT:
+========
+nter the list data type:(1001,'Atul','Python',28)
+(1001, 'Atul', 'Python', 28)
+
+<class 'tuple'>
+---Fetching the data from the list---
+1001
+Atul
+Python
+28
+
+End of an application ...
+
+
+->tuple is immutable object
+======================
+
+import time 
+t1=(1000,2000,3000,4000)
+print("---Before immutable operation---")
+print(t1)
+print()
+print('--After immutable operation---')
+t1[0]=20000 
+print(t1)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT
+=======
+--Before immutable operation---
+(1000, 2000, 3000, 4000)
+
+--After immutable operation---
+Traceback (most recent call last):
+  File "test1.py", line 7, in <module>
+    t1[0]=20000
+TypeError: 'tuple' object does not support item assignment
+
+
+
+
+In real application tuple can be used for sake of reabability operation.It is more faster than 
+list data type.
+
+
+
+
+
+
+
+
+
+
+
+

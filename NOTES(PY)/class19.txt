@@ -1,0 +1,376 @@
+Ex1:
+===
+import time 
+def Test_Case1():
+    eid=int(input("Enter the eid:"))
+    ename=input("Enter the ename:")
+    esal=float(input("Enter the esal:"))
+    design=input("Enter the design:")
+    company=input('Enter the company:')
+    print("----Employee Information---")
+    print("Eid is:",eid)
+    print("Ename is:",ename)
+    print("Esal is:",esal)
+    print("Design is:",design)
+    print("Company is:",company)
+Test_Case1()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex2:
+===
+import time 
+def Test_Case1(eid,ename,esal,design,company):
+    eid=int(input("Enter the eid:"))
+    ename=input("Enter the ename:")
+    esal=float(input("Enter the esal:"))
+    design=input("Enter the design:")
+    company=input('Enter the company:')
+    print("----Employee Information---")
+    print("Eid is:",eid)
+    print("Ename is:",ename)
+    print("Esal is:",esal)
+    print("Design is:",design)
+    print("Company is:",company)
+Test_Case1(eid=None,ename=None,esal=None,design=None,company=None)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex3:
+===
+import time 
+def Test_Case1(eid,ename,esal,design,company):
+    eid=int(input("Enter the eid:"))
+    ename=input("Enter the ename:")
+    esal=float(input("Enter the esal:"))
+    design=input("Enter the design:")
+    company=input('Enter the company:')
+    print("----Employee Information---")
+    print("Eid is:",eid)
+    print("Ename is:",ename)
+    print("Esal is:",esal)
+    print("Design is:",design)
+    print("Company is:",company)
+Test_Case1(eid=1001,ename="Ajay",esal=42000,design="DAD",company="Infosys")
+print()
+time.sleep(2)
+print("End of an application ..")
+
+Working with return keyword:
+=======================
+return is keyword in python.The main objective of return keyword is meant for a function can
+return another function.If we are using return keyword inside the function.We must write that 
+function inside the print() statement.Otherwise we will get the output as None
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    print("Hi guys hope you are doing well ...")
+    return "Django"
+Test_Case1()
+Test_Case1()
+Test_Case1()
+print(Test_Case1())
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    print("Hi guys hope you are doing well ...")
+Test_Case1()
+Test_Case1()
+Test_Case1()
+print(Test_Case1())
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+def Test_Add1(x,y):
+    return x+y 
+print("The sum is:",Test_Add1(100,2000))
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Arguments in functional programming language in python
+===============================================
+->Positional argument
+->Default arguments
+->keyword argument
+->Variable length argument
+->Keyword variable length argument
+
+
+->Positional argument:
+==================
+PA can be represent as it is a combination of formal and actual parameters.PA cab work on based 
+on the position.
+
+Ex1:
+===
+import time 
+def Test_Case1(x,y,z):
+    print('The value of x is:',x)
+    print('The value of y is:',y)
+    print('The value ofz is:',z)
+Test_Case1(1,2,3)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+def Test_Case1(z,y,x):
+    print('The value of x is:',x)
+    print('The value of y is:',y)
+    print('The value ofz is:',z)
+Test_Case1(1,2,3)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Default arguments:
+==================
+Default argument can be represent as while defining or declaring a function if we are using formal parameters with their values then it is said to be DA.While working DA.DA must be
+placed in last position.
+
+
+Ex1:
+===
+import time 
+def Test_Case1(sid=1001,sname,sub,marks):
+    print("---Student Information---")
+    print("Sid is:",sid)
+    print("Sname is:",sname)
+    print("Sub is:",sub)
+    print("marks is:",marks)
+print()
+Test_Case1("Laxman","Python",67)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex2:
+===
+import time 
+def Test_Case1(sname,sub,marks=76,sid=1001):
+    print("---Student Information---")
+    print("Sid is:",sid)
+    print("Sname is:",sname)
+    print("Sub is:",sub)
+    print("marks is:",marks)
+print()
+Test_Case1("Laxman","Python")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+def Test_Case1(sid=1001,sname="Prasanth",sub="Django",marks=77):
+    print("---Student Information---")
+    print("Sid is:",sid)
+    print("Sname is:",sname)
+    print("Sub is:",sub)
+    print("marks is:",marks)
+print()
+Test_Case1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+def Test_Case1(sid=1001,sname="Prasanth",sub="Django",marks=77):
+    print("---Student Information---")
+    print("Sid is:",sid)
+    print("Sname is:",sname)
+    print("Sub is:",sub)
+    print("marks is:",marks)
+print()
+Test_Case1(1002,"Ravi","Flask",78)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->keyword argument:
+==================
+Keyword argument can be represent as while calling a function if we are actual parameters with 
+their values than it is said to be keyword argument.
+
+
+import time 
+def Test_Case2(cid,cname,address,mobile):
+    print('---Customer Information---')
+    print("Cid is:",cid)
+    print("Cname is:",cname)
+    print("Address is:",address)
+    print("Mobile number is:",mobile)
+    print("------------------")
+print()
+Test_Case2(cid=1001,cname="John",address="Hyd",mobile="+91-9090123123")
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+->Variable length argument:
+=======================
+Variable length argument can be represent as * followed by variable_name.The main objective 
+of variable length argument is read zero number of arguments or more than one number of arguments.
+
+def  m1(*variable_name):
+             ----
+             ----
+
+
+Ex1:
+===
+import time 
+def Test_Case3(*a):
+    sum=0 
+    for x in a:
+        sum=sum+x 
+    print("The sum of arguments is:",sum)
+Test_Case3()
+Test_Case3(10)
+Test_Case3(10,20)
+Test_Case3(10,20,30)
+Test_Case3(10,20,30,40)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+----
+import time 
+def Test_Case3(*a):
+    print(a) 
+Test_Case3()
+Test_Case3(10)
+Test_Case3(10,20)
+Test_Case3(10,20,30)
+Test_Case3(10,20,30,40)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex3:
+====
+import time 
+def Test_Case3(*a):
+    for s1 in a:
+        time.sleep(1)
+        print(s1)
+Test_Case3()
+Test_Case3(10)
+Test_Case3(10,20)
+Test_Case3(10,20,30)
+Test_Case3(10,20,30,40)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+def Test_Case3(*a):
+    for s1 in a:
+        time.sleep(1)
+        print(s1)
+Test_Case3("Rahul","Reddy","rahul12345","_12345","_12345","rahul@gmail.com","9090123123")
+print()
+Test_Case3("Ajay","Reddy","ajay12345","_12345","_12345","ajay@gmail.com","9090123124")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+->Keyword variable length argument:
+==============================
+KVLA can be represent as ** followed variable_name.The main objective of keyword variable 
+length argument is represent the data or information into dict format or key and value paire
+
+
+def f1(**variable_name):
+        ----
+       ----
+
+
+Ex1:
+===
+import time 
+def Test_Case3(**x):
+    for s1,s2 in x.items():
+        print(s1,'----',s2)
+Test_Case3(eid=1001,ename="Mahesh",esal=32000)
+print()
+Test_Case3(eid=1002,ename="Ajay",esal=36000)
+print()
+Test_Case3(eid=1003,ename="Atul",esal=22000)
+print()
+Test_Case3(eid=1004,ename="Rakesh",esal=30000)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Q1)What is difference between *a and **a?
+
+Variable length argument return the data or information into a tuple format.
+Keyword variable length argument return the data into a dict format or key and value format.
+
+
+Ex1:
+===
+import time 
+
+def Test_Case1(*a):
+    print(a)
+print()
+
+def Test_Case2(**b):
+    print(b.items())
+print()
+print("----Using *a -----")
+Test_Case1(1001,"Rahul",35000.0,"DAD",'TM')
+print()
+print("----Using **b----")
+Test_Case2(eid=1001,ename="Rahul",esal=35000.0,design="DAD",company="TM")
+print()
+time.sleep(2)
+print('End of an application ...')
+    
+
+
+
+

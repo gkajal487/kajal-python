@@ -1,0 +1,189 @@
+Control Statements in python:
+========================
+Python supports control statements.The main objective of control statement is write the business or source code of our application by reducing the code.Using control statement we 
+can our application as per our application requirement.
+
+
+Following types of control statements are in python
+
+
+->Decision making statements or conditional statements
+->Iterative statements
+->Transfer statements
+
+
+
+->Decision making statements or conditional statements:
+===============================================
+Following are the decision making or conditional statements in python
+
+->if statement
+->nested if statement
+->if-else statement
+->if-elif-else statement
+
+
+->if statement:
+===========
+if is a decision making statement or conditional statement in python.The main objective of 
+if statement if If codition is true than if block would be executed.
+
+if(cond):
+    ----
+    ----
+or 
+if cond:
+     ----
+    -----
+
+
+Ex1:
+===
+import time 
+langn=input("Enter the language here:")
+if(langn=="Python"):
+    print(langn,":Meant for general application ...")
+print()
+time.sleep(2)
+print("End of an application ....")
+
+
+Ex2:
+===
+import time 
+langn=input("Enter the language here:")
+if langn=="Python":
+    print(langn,":Meant for general application ...")
+print()
+time.sleep(2)
+print("End of an application ....")
+
+Ex3:
+===
+import time 
+number=input("Enter the mobile number:")
+if(number=="+91-7070123123"):
+    print(number,":It is a valid number for application thank you ...")
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+->Nested if statement:
+===================
+Nested if statement can be represent as if we are if statement inside another if statement then it 
+is said to be nested if statement or inner if statement.While working with nested if statement our outer if statement must be true.
+
+if(cond): ----Outer if statement
+     ----
+    -----
+    if(cond): Inner if statement
+          ----
+          ----
+
+
+Ex1:
+===
+import time 
+fname=input("Enter the fname:")
+lname=input("Enter the lname:")
+if(fname=="Satish"):
+    print("My first name is:",fname)
+    if(lname=="Kumar"):
+        print("My last name is:",lname)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+if-else:
+=====
+if-else is a decision making or statement in python.The main objective of if-else block
+if if condition is true than if block would be executed otherwise else block would  be executed
+
+if(cond):
+    ----
+    ----
+esle:
+      ----
+      -----
+
+
+Ex1:
+===
+import time 
+p1=input("Enter the password:")
+p2=input("Enter the confirm password:")
+if(p1=="12345" and p2=="12345"):
+    print(p1,p2,": It is valid password ...")
+else:
+    print(p1,p2,":It is invalid password ...")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+p1=input("Enter the password:")
+p2=input("Enter the confirm password:")
+if(p1==p2):
+    print(p1,p2,": It is valid password ...")
+else:
+    print(p1,p2,":It is invalid password ...")
+print()
+time.sleep(1)
+print("End of an application ...")
+
+Ex3:
+===
+import time 
+number=eval(input('Enter the any number:'))
+if(number%2==0):
+    print(number,":IT IS EVEN NUMBER")
+else:
+    print(number,":IT IS A ODD NUMBER")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+number=eval(input('Enter the any number:'))
+if(number%2==0):
+    print(number,":IT IS EVEN NUMBER")
+    break
+else:
+    print(number,":IT IS A ODD NUMBER")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+OUTPUT:
+======
+:\Users\HI\Desktop>Python test1.py
+  File "test1.py", line 5
+    break
+    ^
+SyntaxError: 'break' outside loop
+
+
+if-elif-else:
+========
+if-elif-else is a decision making in python.The main objective of if-elif-else is check more than one
+condition as per the application requirement.
+
+if(cond):
+     ---
+     ----
+elif(cond): 
+      ----
+elif(cond):
+       ----
+else:
+      ----
+      

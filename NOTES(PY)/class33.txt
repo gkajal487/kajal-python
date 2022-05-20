@@ -1,0 +1,306 @@
+Decorators in python:
+==================
+Python supports decorator.Decorator is a function.The main objective of decorator it takes a input function and provide the output function with extended functionality.We can define or 
+declare uisng @decor decorator
+
+
+Ex1:
+===
+import time 
+def Test_Case1(name):
+    print("Name of the language is:",name)
+Test_Case1("Python")
+print()
+Test_Case1("Java")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+====
+import time 
+def decor(func):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for data science applications")
+        else:
+            func(name)
+    return inner
+@decor
+def Test_Case1(name):
+    print("Name of the language is:",name)
+Test_Case1("Python")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+def decor(func):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for data science applications")
+        elif(name=="Java"):
+            print(name,":Meant for ERP appliction ...")
+        else:
+            func(name)
+    return inner
+@decor
+def Test_Case1(name):
+    print("Name of the language is:",name)
+Test_Case1("Python")
+print()
+Test_Case1("Java")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+def decor(func):
+    def inner(name):
+        if(name=="python"):
+            print(name,":Meant for data science applications")
+        elif(name=="java"):
+            print(name,":Meant for ERP appliction ...")
+        else:
+            func(name)
+    return inner
+@decor
+def Test_Case1(name):
+    print("Name of the language is:",name)
+Test_Case1("Python")
+print()
+Test_Case1("Java")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+def decor( Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for data science applications")
+        elif(name=="Java"):
+            print(name,":Meant for ERP appliction ...")
+        else:
+             Test_Case1(name)
+    return inner
+@decor
+def Test_Case1(name):
+    print("Name of the language is:",name)
+Test_Case1("Python")
+print()
+Test_Case1("Java")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+===
+import time 
+def decor( Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for data science applications")
+        elif(name=="Java"):
+            print(name,":Meant for ERP appliction ...")
+        else:
+             Test_Case1(name)
+    return inner
+
+def Test_Case1(name):
+    print("Name of the language is:",name)
+decorfunction=decor(Test_Case1)
+Test_Case1("Python")
+print()
+decorfunction("Python")
+print()
+Test_Case1("Java")
+print()
+decorfunction("Java")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+def decor(func):
+    def inner(a,b):
+        if(b==0):
+            print(b,": Dear user Only allow numbers are [0:9]")
+        else:
+            func(a,b)
+    return inner
+@decor 
+def Test_Case2(a,b):
+    print("The result is:",a//b)
+Test_Case2(100,10)
+print()
+Test_Case2(100,5)
+print()
+Test_Case2(100,20)
+print()
+Test_Case2(100,0)
+print()
+Test_Case2(100,2)
+print()
+Test_Case2(50,10)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+Ex8:
+===
+import time 
+def Test_Case1(func):
+    def inner(fname,lname,username,p1,p2,email):
+        if(username=="rahul12345" and p1=="12345"):
+            print("---Username & Passwoord---")
+            print(username,p1)
+            print("---------------")
+        else:
+            func(fname,lname,username,p1,p2,email)
+    return inner
+@Test_Case1
+def New_User_Case1(fname,lname,username,p1,p2,email):
+    print("----New User Information----")
+    print(fname,lname,username,p1,p2,email)
+    print("---------------------------------")
+New_User_Case1("Rahul","Reddy","rahul12345","12345","12345","rahul@gmail.com")
+
+
+Asseration in python:
+=================
+Python supports asseration.The main objective of asseration is perform debugging 
+operations.Debugging can be represent as searching and find & fix the bugs or error.in python
+we can implement asseration methodlogy using assert keyword.In python we do have
+two types asseration 
+
+->Simple asseration
+->Augmented asseration
+
+->simple asseration:
+================
+Simple asseration will display the asseration error if there is debug in python script
+
+->Augmented asseration:
+======================
+Augmented asseration will display asseration error with meaningfull message if there is a debug in python script.
+
+
+We do have three important phases are there to develop a software
+
+->Development phase
+->Testing Phase
+->Production or deployment phase
+
+Assertion methodlogy can be implemented in following phases
+
+->Developement phase
+->Testing phase
+
+
+Note:
+-------
+assert keyword is ulternative solution for print() function
+
+
+Ex1:
+===
+import time 
+emp_id=1001 
+emp_id>1001
+print(emp_id)
+print()
+time.sleep(2)
+print("End of an applucation ..")
+
+
+Ex2:
+===
+import time 
+emp_id=1001 
+assert emp_id>1001
+print(emp_id)
+print()
+time.sleep(2)
+print("End of an applucation ..")
+
+
+Ex3:
+===
+import time 
+emp_id=1001 
+assert emp_id>1001,"Dear user how 1001 is> 1001 sorry ..."
+print(emp_id)
+print()
+time.sleep(2)
+print("End of an applucation ..")
+
+
+Ex4:
+===
+import time 
+def Test_Sqaure_Case1(num):
+    return num**num 
+assert Test_Sqaure_Case1(3)==9,"The sqaure of 3 is 9"
+assert Test_Sqaure_Case1(4)==16,"The sqaure of 4 is 16"
+assert Test_Sqaure_Case1(5)==25,"The sqaure of 5 is 25"
+assert Test_Sqaure_Case1(6)==36,"The sqaure of 6 is 36"
+print(Test_Sqaure_Case1(2))
+print()
+print(Test_Sqaure_Case1(3))
+print()
+print(Test_Sqaure_Case1(4))
+print()
+print(Test_Sqaure_Case1(5))
+print()
+print(Test_Sqaure_Case1(6))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex5:
+===
+import time 
+def Test_Sqaure_Case1(num):
+    return num*num 
+assert Test_Sqaure_Case1(3)==9,"The sqaure of 3 is 9"
+assert Test_Sqaure_Case1(4)==16,"The sqaure of 4 is 16"
+assert Test_Sqaure_Case1(5)==25,"The sqaure of 5 is 25"
+assert Test_Sqaure_Case1(6)==36,"The sqaure of 6 is 36"
+print(Test_Sqaure_Case1(2))
+print()
+print(Test_Sqaure_Case1(3))
+print()
+print(Test_Sqaure_Case1(4))
+print()
+print(Test_Sqaure_Case1(5))
+print()
+print(Test_Sqaure_Case1(6))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+
+
+
+
+
+
+
+
+
+

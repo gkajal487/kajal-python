@@ -1,0 +1,124 @@
+Inner functions  in python
+=====================
+Python supports inner function.It is a also known as nested function.A function which is declared 
+inside another function.Then it is said to inner function or nested function.
+
+def   f1():
+               ----
+               -----
+               def  f2():
+                      -----
+                      -----
+
+def Car():
+          -----
+          ------
+        def Engine():
+                    -----
+                    -----
+def   Uninercity():
+                    ----
+                   -----
+                   def College():
+                               ----
+                               ----
+
+
+Ex1:
+===
+import time 
+def Car():
+    print("Car Imp ....")
+    def Engine():
+        print('Engine Imp ...')
+    Engine()
+Car()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Name of the language is:Python
+Date of release:19/7/2022
+
+
+Ex2:
+===
+import time 
+def Test_Case1(name):
+    print("Name of the language is:",name)
+    def Test_Case2(day,month,year):
+        print("date of release is:{}/{}/{}".format(day,month,year))
+    Test_Case2(16,7,1989)
+Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+City is:Hyderabad
+Pin code is:500020
+State is:TS
+Country is:India
+
+
+
+import time 
+def City_Case1(name):
+    print('City is:',name)
+    def Pincode_Case2(num):
+        print("Pin code is:",num)
+    Pincode_Case2(500025)
+    def State_Case3(name):
+        print("State is:",name)
+    State_Case3("TS")
+    def Country_Case4(name):
+        print("Country is:",name)
+    Country_Case4("India")
+City_Case1("Hyderabad")
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Packages in python
+================
+
+
+What is module?
+-------------------
+A module can be represent as if it contians classes,functions,objects,variables then it is said to 
+be a module.Our Python script it self is a module.
+
+
+What is Package?
+=============
+A package can be represent as collection of one or more than one module then it is said to be 
+a packagae.
+
+
+What is libary?
+-----------------
+A libary can be represent as collection of one or more than one package.Then it is said be
+a libary
+
+
+What is Framework?
+=================
+Framework can be represent as collection of one or more than one libary.Then it is said to be 
+a framework.
+
+
+
+What is Package in python
+======================
+Package can be represent as collection of one or more than one module.A package is nothing a folder or directory.A package is said to be python package if it contains __init__.py file .which
+is empty file.As per the application requirement we can create any number of packages or nested 
+packages.
+
+
+
+
+
+
+

@@ -1,0 +1,367 @@
+Set data type:
+===========
+Python supports set data type.If you want to represent one or more than one object or group of
+objects as a single entity than we can go with set data type.In python set data type can be represent as {}.If we are defining or declaring {} than PVM will consider dict data type.Using set()
+
+
+Ex1:
+====
+import time 
+s1={}
+print(s1)
+print()
+print(type(s1))
+s2=set()
+print(s2)
+print()
+print(type(s2))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+s1={10}
+print(s1)
+print()
+print(type(s1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->Inseration is not preserved
+->Duplicate objects are not allowed
+->Hetrogenious objects are allowed
+->Set is mutable object
+->Set is adynamic or growable
+->Indexing and slice operator is not applicable for set data type
+
+
+->Inseration is not preserved:
+========================
+Ex1:
+-----
+import time 
+s1=eval(input("Enter the set data type:"))
+print(s1)
+print(type(s1))
+print()
+print("---Fetching the data---")
+for a in s1:
+    time.sleep(1)
+    print(a)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT:
+=======
+Enter the set data type:{10,20,30,40,50,60,70,80}
+{70, 40, 10, 80, 50, 20, 60, 30}
+<class 'set'>
+
+---Fetching the data---
+70
+40
+10
+80
+50
+20
+60
+30
+
+End of an application ...
+
+
+->Duplicate objects are not allowed:
+============================
+
+Ex1:
+===
+import time 
+s1=eval(input("Enter the set data type:"))
+print(s1)
+print(type(s1))
+print()
+print("---Fetching the data---")
+for a in s1:
+    time.sleep(1)
+    print(a)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT:
+=======
+Enter the set data type:{10,20,30,40,50,60,10,20,30,50}
+{40, 10, 50, 20, 60, 30}
+<class 'set'>
+
+---Fetching the data---
+40
+10
+50
+20
+60
+30
+
+End of an application ...
+
+
+->Hetrogenious objects are allowed:
+=============================
+
+Ex1:
+----
+import time 
+s1=eval(input("Enter the set data type:"))
+print(s1)
+print(type(s1))
+print()
+print("---Fetching the data---")
+for a in s1:
+    time.sleep(1)
+    print(a)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+OUTPUT:
+=======
+Enter the set data type:{1001,'Shoaib',45000,'Python developer','TM'}
+{'TM', 45000, 1001, 'Shoaib', 'Python developer'}
+<class 'set'>
+
+---Fetching the data---
+TM
+45000
+1001
+Shoaib
+Python developer
+
+End of an application ...
+
+->Set is mutable object:
+===================
+import time 
+s1={chr(97),chr(98),chr(99),chr(100),chr(101)}
+print("--Before mutable operation---")
+print(s1)
+print()
+print(type(s1))
+print()
+print("---After mutable operation---")
+s1[0]='A'
+print(s1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+OUTPUT:
+=======
+
+->Set is adynamic or growable:
+=========================
+Set is a dynamic or growable which means we can increase or decrease the size of set as per the 
+application requirement using following function.
+->add():It is used to  add one object at time
+->remove():It is used to remove one object at time
+
+
+Ex1:
+===
+->Indexing and slice operator is not applicable for set data type:
+===================================================
+Ex1:
+----
+import time 
+s1={100,200,300,400}
+print(s1)
+print()
+print(s1[0])
+print()
+print(s1[1])
+print()
+print(s1[0:])
+print(s1[::-1])
+print()
+time.sleep(1)
+print("End of an application ...")
+
+OUTPUT:
+=======
+{200, 100, 400, 300}
+
+Traceback (most recent call last):
+  File "test1.py", line 5, in <module>
+    print(s1[0])
+TypeError: 'set' object does not support indexing
+
+
+Dict data type:
+============
+Python supports dict data type.If you want to represent one or more than object as key and value pair than we can go with dict data type.In python we can represent dict data type using 
+dict() and {}
+
+import time 
+d1={}
+print(d1)
+print()
+print(type(d1))
+print()
+d2=dict()
+print(d2)
+print()
+print(type(d2))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+{'key':value}
+or
+{"key":value}
+
+
+Ex1:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000}
+print(d1)
+print()
+print(type(d1))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex2:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000,"pid":1002}
+print(d1)
+print()
+print(type(d1))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex3:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000}
+print(d1)
+print()
+print("---Updating my dict---
+d1['company']="VIVO"
+d1['m_date']="12-12-2022"
+d1['exp_date']="12-12-2023"
+print(d1)
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex4:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000}
+print(d1)
+print()
+print("---Product Information---")
+print("Product_id is:",d1['pid'])
+print("Product_name is:",d1['pname'])
+print("Price is:",d1['price'])
+print('---------------------')
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000,"company":"VIVO"}
+print(d1)
+print()
+print('---Keys---')
+for x in d1.keys():
+    time.sleep(1)
+    print(x)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+Ex6:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000,"company":"VIVO"}
+print(d1)
+print()
+print('---Values---')
+for x in d1.values():
+    time.sleep(1)
+    print(x)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex7:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000,"company":"VIVO"}
+print(d1)
+print()
+print('Key',"----","Values")
+for a,b in d1.items():
+    print(a,"----",b)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex8:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000,"company":"VIVO"}
+print(d1)
+print()
+print("Key","----","Values")
+for b in d1.items():
+    print(b)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+d1={"pid":1001,"pname":"Mobile","price":19000,"company":"VIVO"}
+print(d1)
+print()
+print(d1.keys())
+print()
+print(d1.values())
+print()
+print(d1.items())
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+

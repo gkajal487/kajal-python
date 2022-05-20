@@ -1,0 +1,277 @@
+Slice operator with negative index:
+============================
+Python supports negative index which starts from -1 to end+1.While working with slice operator 
+with negative index our step must be - number otherwise bases application requirement most of 
+the time the output would be empty.
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("---Using slice operator with negative index---")
+print(str1[-1:-7:-1])
+print("------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+====
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("---Using slice operator with negative index---")
+print(str1[-1:-7:-3])
+print("------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("---Using slice operator with negative index---")
+print(str1[-1:-11:1])
+print("------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+input():
+======
+It is a predefine function in python.The main objective of input() function is read the dynamically value  from the keyboard.When ever if we are reading any data or information from keyboard.PVM will consider as string as default.
+
+
+Ex1:
+===
+import time 
+x1=input("Enter the value of x1:")
+print(x1)
+print()
+print(type(x1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+x1=input("Enter the value of x1:")
+x2=input("Enter the value of x2:")
+res1=x1+x2 
+print("The result is:",res1)
+print()
+print(type(res1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+Why typecasting is required in python
+-----------------------------------------------
+
+Ex1:
+===
+import time 
+print("---Before typecasting---")
+x1=input("Enter the value of x1:")
+x2=input("Enter the value of x2:")
+print(type(x1))
+print(type(x2))
+res1=x1+x2 
+print("The result is:",res1)
+print(type(res1))
+print()
+print("---After typecasting---- ")
+x1=int(input("Enter the value of x1:"))
+x2=int(input("Enter the value of x2:"))
+print(type(x1))
+print(type(x2))
+res2=x1+x2 
+print("The result is:",res2)
+print(type(res2))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+What is typecasting?
+===============
+Python supports typecasting.It is the process or methodlogy to converting from one to another
+type than it is said to be typecasting.Python provides following function to perform typecasting
+
+->int()
+->float()
+->str()
+->complex()
+->bool()
+
+
+Ex1:
+===
+import time 
+x1=int(input("Enter the value of x1:"))
+x2=int(input("Enter the value of x2:"))
+res2=x1+x2 
+print("The result is:",res2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+Ex2:
+===
+import time 
+x1=float(input("Enter the value of x1:"))
+x2=float(input("Enter the value of x2:"))
+res2=x1+x2 
+print("The result is:",res2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex3:
+===
+import time 
+x1=complex(input("Enter the value of x1:"))
+x2=complex(input("Enter the value of x2:"))
+res2=x1+x2 
+print("The result is:",res2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex4:
+===
+import time 
+x1=bool(input("Enter the value of x1:"))
+x2=bool(input("Enter the value of x2:"))
+res2=x1+x2 
+print("The result is:",res2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex5:
+====
+import time 
+z1=100
+print(z1)
+print()
+print(type(z1))
+print()
+z2=str(z1)
+print(z2)
+print()
+print(type(z2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+eval():
+=====
+It is a predefine function in python.The main objective of eval() function is read any data from keybaord as per the end user requirement.While reading the string data type we must string
+object into '' or "".
+
+
+Ex1:
+===
+import time 
+x1=eval(input("Enter the data as per your wish:"))
+print(x1)
+print()
+print(type(x1))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+All fundamental data types are immutable or stateless object
+
+Int,float,str,complex,bool
+
+
+Ex1:
+===
+import time
+str1="python"
+print("---Before immutable operations---")
+print(str1)
+print()
+print(type(str1))
+print()
+print("---After immutable operation----")
+str1[0]="P"
+print(str1)
+print()
+time.sleep(2)
+print("End of an application ")
+
+What is immutable object(stateless object) and mutable object(statefull object)
+
+immutable object(stateless object):
+============================
+Once we create an object we can not modifiy it or cannot change as per the application requirement.
+Int,Float,str,complex,bool,tuple,frozenset,bytes
+
+
+Mutable object(statefull object):
+========================
+Once we create an object we can modifiy it or can change the object as per  the applcation requiement
+list,set,dict,bytearray
+
+
+List data type
+============
+Python supports list data type.If you want to represent one or more than object as a single entity than we can go with list data type.In python list data type can be represent as [] or list().
+
+
+import time 
+l1=[]
+print(l1)
+print()
+print(type(l1))
+print()
+l2=list()
+print(l2)
+print()
+print(type(l2))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+import time 
+l1=['A']
+print(l1)
+print()
+print(type(l1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+Modular programming language in python:
+===================================
+Python supports modular programming language.The main objective of modular progrmming
+language is import & export the data or information from one module to another module or from
+application to another application or from one project to another project.
+
+
+test1.py
+=====
+print("This is core python")
+
+
+test2.py
+======
+import time 
+import test1 
+print("This is advance pyhton ...")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+test1.py
+======
+list_items=[120,130,140,150,160]
+def Test_Sqaure(x):
+    print("The sqaure  of a number is:",x*x)
+def Test_Sum(a,b):
+    print("The sum  is:",a+b)
+def Test_Division(x,y):
+    print('The div is:',x/y)
+
+
+
+test2.py
+======
+import time 
+import test1 
+print(test1.list_items)
+test1.Test_Sqaure(25)
+test1.Test_Sum(12,16)
+test1.Test_Division(100,10)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+test1.py
+=======
+list_items=[120,130,140,150,160]
+def Test_Sqaure(x):
+    print("The sqaure  of a number is:",x*x)
+def Test_Sum(a,b):
+    print("The sum  is:",a+b)
+def Test_Division(x,y):
+    print('The div is:',x/y)
+
+
+test2.py
+======
+import time 
+from test1 import * 
+print(list_items)
+Test_Sqaure(7)
+Test_Sum(10,20)
+Test_Division(100,20)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+test1.py
+=======
+list_items=[120,130,140,150,160]
+def Test_Sqaure(x):
+    print("The sqaure  of a number is:",x*x)
+def Test_Sum(a,b):
+    print("The sum  is:",a+b)
+def Test_Division(x,y):
+    print('The div is:',x/y)
+
+test2.py
+=======
+import time 
+from test1 import Test_Sqaure,Test_Sum,Test_Division,list_items
+print(list_items)
+Test_Sqaure(7)
+Test_Sum(10,20)
+Test_Division(100,20)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+test1.py
+=====
+list_items=[120,130,140,150,160]
+def Test_Sqaure(x):
+    print("The sqaure  of a number is:",x*x)
+def Test_Sum(a,b):
+    print("The sum  is:",a+b)
+def Test_Division(x,y):
+    print('The div is:',x/y)
+
+
+test2.py
+======
+import time 
+from test1 import Test_Sqaure
+#print(list_items)
+Test_Sqaure(7)
+#Test_Sum(10,20)
+#Test_Division(100,20)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+test1.py
+======
+list_items=[120,130,140,150,160]
+def Test_Sqaure(x):
+    print("The sqaure  of a number is:",x*x)
+def Test_Sum(a,b):
+    print("The sum  is:",a+b)
+def Test_Division(x,y):
+    print('The div is:',x/y)
+
+
+
+test2.py
+======
+import time 
+from test1 import list_items as a,Test_Sqaure as ts,Test_Sum as sum ,Test_Division as td
+print(a)
+ts(7)
+sum(10,20)
+td(100,20)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+test1.py
+======
+print("This is core python")
+
+
+
+test2.py
+=======
+import time 
+import test1 
+import test1 
+import test1 
+import test1 
+print("This is advance python ...")
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+test1.py
+======
+print("This is core python")
+
+
+test2.py
+======
+import time 
+import test1 
+import test1 
+import test1 
+import test1 
+from imp import * 
+reload(test1)
+reload(test1)
+reload(test1)
+reload(test1)
+print("This is advance python ...")
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+math module:
+==========
+It is a predefine module in python.The main objective of math module is develope the scientific 
+application or calculator.
+
+
+Ex1:
+====
+import time 
+import math 
+print("---Sub module---")
+print(dir(math))
+print("-------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+import math 
+print(math.sqrt(25))
+print()
+print(math.cos(45))
+print()
+print(math.tan(90))
+print()
+print(math.log2(120))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

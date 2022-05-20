@@ -1,0 +1,345 @@
+Ex1:
+===
+import time 
+city=input("Enter the city:")
+if(city=="Hyderabad"):
+    print(city,":Famous Biryani")
+elif(city=="Banguluru"):
+    print(city,":Famous for voda pao")
+elif(city=="Mumbai"):
+    print(city,":Famous for faluda")
+elif(city=="Calcutta"):
+    print(city,":Famous Pani puri")
+else:
+    print(city,":Dear user enter the proper city:")
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+1  ---->ONE
+5 ---->FIVE
+9----NINE
+10 --->
+
+
+Ex2:
+===
+import time 
+number=int(input("Enter the number from [0:9]:"))
+if(number==0):
+    print(number,"--->ZERO")
+elif(number==1):
+    print(number,"--->ONE")
+elif(number==2):
+    print(number,"--->TWO")
+elif(number==3):
+    print(number,"--->THREE")
+elif(number==4):
+    print(number,"--->FOUR")
+elif(number==5):
+    print(number,"--->FIVE")
+elif(number==6):
+    print(number,"--->SIX")
+elif(number==7):
+    print(number,"--->SEVEN")
+elif(number==8):
+    print(number,"--->EIGHT")
+elif(number==9):
+    print(number,"--->NINE")
+else:
+    print(number,"--->Only allow number are[0:9]")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+Iterative statements:
+=================
+Python supports iterative statements.The main objective of iterative statement if you want to execute number of statements number of times then we can go with iterative statements.In python following are the iterative statements in python
+
+->for loop
+->nested for loop
+->while loop
+->nested while loop
+
+
+Note:In python do while and switch statement is not supported 
+
+
+->for loop:
+=========
+It is a iterative statement in python.The main objective of for loop is if you want to execute number of statements number of time if our data or information is in sequence then we can go 
+with for loop
+
+for(cond):
+    -----
+    -----
+
+
+Ex1:
+===
+import time 
+for x in range(15):
+    print("*")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+for x in range(8):
+    print("*",end="  ")
+print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+for x in "QT & IHUB":
+    print(x)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+for x in [100,200,300,400,500]:
+    print(x)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+for x in (100,200,300,400,500):
+    print(x)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+===
+import time 
+l1=[1,2,3,4,5,6]
+print(l1)
+print()
+for l2 in l1:
+    time.sleep(1)
+    print(l1)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex7:
+===
+import time 
+l1=[1,2,3,4,5,6]
+print(l1)
+print()
+for l2 in l1:
+    time.sleep(1)
+    print(l2)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex8:
+===
+import time 
+l1=[1,2,3,4,5,6]
+for x in l1:
+    if(x%2==1):
+        print("The odd numbers are:",x)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex9:
+===
+import time 
+l1=[1,2,3,4,5,6]
+sum=0 
+for x1 in l1:
+    sum=sum+x1
+print("The sum  of list is:",sum)
+print()
+time.sleep(1)
+print('End of an application ...')
+
+
+Ex10:
+===
+import time 
+l1=[10,20,30,40,50,60]
+for x in range(len(l1)):
+    print(x)
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+Ex11:
+===
+import time 
+l1=[10,20,30,40,50,60]
+for x in range(len(l1)):
+    print(l1[x])
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+Ex12:
+====
+import time 
+l1=[10,20,30,40,50,60]
+sum=0 
+for x in range(len(l1)):
+    sum=sum+l1[x]
+print("The sum of list is:",sum)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Ex13:
+===
+import time 
+l1=[10,20,30,40,50,60,10,20,30]
+print("Before removing the duplicate objects:",l1)
+res=[] 
+for i in l1:
+    if i not in res:
+        res.append(i)
+print("Our list is after removing duplicate objects:",res)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex14:
+=====
+import time
+c=0 
+str1=input('Enter any string:')
+print(str1)
+for x in str1:
+    if x in ('aeiouAEIOU'):
+        c+=1 
+        print(x)
+print("Number of vowels are:",c)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex15:
+====
+import time 
+number=int(input("Enter the number here:"))
+for x in range(1,11):
+    time.sleep(1)
+    print("%dX%d=%d"%(number,x,number*x))
+    print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex16:
+====
+import time 
+number=int(input("Enter the number here:"))
+for x in range(1,11):
+    time.sleep(1)
+    print("%dX%d=%d\n"%(number,x,number*x))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex17:
+====
+import time 
+n=int(input('Enter the number of rows:'))
+for x in range(n):
+    pid=int(input("Enter the pid:"))
+    pname=input("Enter the pname:")
+    price=float(input("Enter the price:"))
+    company=input("Enter the company:")
+    m_date=input("Enter the m_date")
+    exp_date=input("Enter the exp_date:")
+print()
+print("---Product Information---")
+print(pid,pname,price,company,m_date,exp_date)
+print('--------------------------------------')
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+DAD  ---DAD
+MADAM  --->MADAM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

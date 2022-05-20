@@ -1,0 +1,354 @@
+Ternary operator:
+==============
+->Uniary operator
+->Binary operator 
+->Ternary operator
+
+
+->Uniary operator:
+==============
+Uniary operator can be represent as only one operator with one variable(identifier).Then it 
+is said to be uniary operator.
+
+
+Ex1:
+====
+import time 
+x=True 
+print(x)
+print()
+print(type(x))
+y=not x
+print(y)
+print()
+print(type(y))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Binary operator 
+----------------------
+Binary operator can be represent as only one operator with two variables(an identiifer).Then it 
+is said to be binary operator.
+
+
+Ex1:
+===
+import time 
+print("---Using binary operator---")
+a=12000
+b=16000
+res1=a+b 
+print()
+print("The sum is:",res1)
+print()
+time.sleep(2)
+print("End of an aplication ...")
+
+
+Ternary operator:
+==============
+Python supports ternary operator which can be represent as if we are more than one variable(an indentifier)wit more than one condition than it is said to be ternary operator.
+
+a=50
+b=40
+res1=a if a>b else b
+
+
+Ex1:
+===
+import time 
+x1=int(input("Enter the value of x1:"))
+y1=int(input("Enter the value of y1:"))
+res1=x1 if x1>y1 else y1
+print("The maxumum of two number is:",res1)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+x1=int(input("Enter the value of x1:"))
+y1=int(input("Enter the value of y1:"))
+min=x1 if x1<y1 else y1
+print("The mininum of two number is:",min)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+a=int(input("Enter the value of a:"))
+b=int(input("Enter the value of b:"))
+c=int(input("Enter the value of c:"))
+max=a if a>b and a>c else b if b>c else c 
+print("The maximum number of three of number is:",max)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Bitwise operator:
+==============
+Python supports bitwise operator.The main objective of bitwise operator is perform bit level operation.Following are the bitwise operators in python
+
+->bitwise and operator ----& 
+->bitwise or operator ----- |
+->bitwise exclusive or operator --- ^
+->bitwise leftshit operator ---- <<
+->bitwise rightshift operator ---- >>
+
+
+->bitwise and operator ----& 
+========================
+x    y           x & y
+-------------------
+0    1              0      
+1    0               0
+1     1              1
+0     0              0
+------------------
+
+
+
+->bitwise or operator ---- |
+========================
+x    y           x | y
+-------------------
+0    1               1 
+1    0               1
+1     1              1
+0     0              0
+------------------
+
+
+
+->bitwise exclusive or operator ---- ^
+========================
+x    y           x ^ y
+-------------------
+0    1                1              
+1    0                 1               
+1     1                0             
+0     0                 0          
+------------------
+
+
+print(4 & 5)
+print(4 | 5)
+print(4 ^ 5)
+
+
+
+ 1     0    0    ----------->4
+
+1      0    1   ------------->5   &   |  ^
+=============================
+1     0       0    result of print(4 & 5) -----> 4
+------------------------------
+1    0      1   result of print(4 | 5)------------>5
+----------------------------------
+0    0    1   result of print(4 ^ 5) ------------>1
+-------------------------------------
+
+Ex1:
+===
+import time 
+print(4 & 5)
+print(4 | 5)
+print(4 ^ 5)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+print(75&7)
+
+75   ------- 1   0  0  1  0   1   1
+ 7---------  0  0  0 0  1    1   1   &
+===================================
+                   0  0   0  0  0  1  1  ------------ result is 3
+===================================
+
+Ex2:
+===
+import time 
+print(75&7)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+print((7&5)|(21^12))
+print((45^21)&(41&3))
+print((76|21)|(45^21))
+
+
+->bin()
+->oct()
+->hex()
+
+
+->bin():
+=====
+It is a predefine function.The main objective of bin() is convert any of pyton object into binary number.In python we can represent binary number as follows
+
+Ex:0B111
+or 
+0b111  ----->7
+
+
+Ex1:
+===
+import time 
+x1=0b111 
+print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+x1=eval(input("Enter the value of x1:"))
+print("The decimal number is:",x1)
+print()
+y1=bin(x1)
+print("The binary number is:",y1)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+Ex3:
+===
+from pickletools import read_bytes1
+import time 
+x1=eval(input("Enter the value of x1:"))
+x2=eval(input("Enter the value of x2:"))
+print()
+y1=bin(x1)
+print()
+print(type(y1))
+print("The binary number is:",y1)
+print()
+y2=bin(x2)
+print(type(y2))
+print("The binary number is:",y2)
+res1=(y1+y2) 
+print("The result of Bitwise & is:",res1)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex4:
+===
+from pickletools import read_bytes1
+import time 
+x1=eval(input("Enter the value of x1:"))
+x2=eval(input("Enter the value of x2:"))
+print()
+y1=bin(x1)
+print()
+print(type(y1))
+print("The binary number is:",y1)
+print()
+y2=bin(x2)
+print(type(y2))
+print("The binary number is:",y2)
+res1=(y1*y2) 
+print("The result of Bitwise & is:",res1)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+
+->oct():
+======
+It is also a predefine function in python .The main objective of  oct() function is convert any type into octal number we can represent octal number in python as follows
+0to7
+Ex:0o12345
+or 
+0O23456
+or 
+0O912345 ---->it is not a octal number
+
+
+Ex1:
+===
+import time 
+x1=eval(input("Enter the value of x1:"))
+print("The  decimal number is:",x1)
+print()
+y1=oct(x1)
+print("The octal number is:",y1)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex2:
+===
+import time 
+x1=0o12345 
+print(x1)
+print()
+print(type(x1))
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+->hex():
+=======
+It is also a predefine function in python.The main objective of hex() function is to convert any type into hexadecimal number.In python we can rerpresent hexadecimal number as follows
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+A or a
+B or b 
+C or c
+D or d 
+E or e
+F or f 
+
+Ex:oXABabE
+or 
+Ex:ox123456789A or a
+
+
+Ex1:
+===
+import time 
+x1=int(input("Enter the any number:"))
+print()
+print("The decimal number is:",x1)
+print()
+y1=hex(x1)
+print("The hexadecimal number is:",y1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,348 @@
+with statement:
+=============
+Using with statement we can create a new file.The main objective of with statement is to close the file automatically
+
+with open("file_name","mode of the file") as f:
+                       ------
+                      -------
+
+
+Ex1:
+===
+import time 
+with open("test1.py","r")as f:
+    print("---File information---")
+    print("Name of the file is:",f.name)
+    print("Mode of the file is:",f.mode)
+    print("File is closed or not:",f.closed)
+    print("File is readable or not:",f.readable())
+    print("File is writable or not:",f.writable())
+    print("-------------------------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+====
+import time 
+with open("test1.py","r")as f:
+    print("---File information---")
+    print("Name of the file is:",f.name)
+    print("Mode of the file is:",f.mode)
+    print("File is closed or not:",f.closed)
+    print("File is readable or not:",f.readable())
+    print("File is writable or not:",f.writable())
+    print("-------------------------------------")
+print()
+print("File is closed or not:",f.closed)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Pickling and unpickling
+===================
+
+Pickling :
+=======
+Python support pickling.It is the process or methodlogy to send the state of object information into a file in binary format.Then it is said pickling.If you want to implement pickling methodlogy in  python we do have one module pickle module inside the pickle module we do have another 
+module dump(object,filename)
+
+
+unpickling:
+=========
+Python supports unpickling.It is the process ormethodlogy to read the data or information from 
+file in actual format.Then it is said to be unpickling.load(f)
+
+
+Ex1:
+===
+import time 
+import pickle 
+class Train:
+    def __init__(self,tno,tname,arrtime,depttime,date):
+        self.tno=tno 
+        self.tname=tname 
+        self.arrtime=arrtime 
+        self.depttime=depttime
+        self.date=date 
+    def m1(self):
+        print(self.tno,self.tname,self.arrtime,self.depttime,self.date)
+with open("data1.txt","wb") as f:
+    t=Train(12345,"RE","11:00 AM IST","12:00 PM IST","29/4/2022")
+    pickle.dump(t,f)
+    print("Pickling process is done ...")
+print()
+with open("data1.txt","rb") as f:
+    obj1=pickle.load(f)
+    print("Unpickling process is done")
+    obj1.m1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+test1.py
+======
+class Train:
+    def __init__(self,tno,tname,arrtime,depttime,date):
+        self.tno=tno 
+        self.tname=tname 
+        self.arrtime=arrtime 
+        self.depttime=depttime
+        self.date=date 
+    def m1(self):
+        print(self.tno,self.tname,self.arrtime,self.depttime,self.date)
+
+
+pick.py
+======
+import time 
+import test1 
+import pickle 
+f=open("info1.txt","wb")
+n=int(input("Enter the number of row:"))
+for x in range(n):
+    tno=int(input("Enter the tno:"))
+    tname=input("Enter the tname:")
+    arrtime=input("Enter the arrtime:")
+    depttime=input("Enter the dettime:")
+    date=input("Enter the date:")
+    t1=test1.Train(tno,tname,arrtime,depttime,date)
+    pickle.dump(t1,f)
+print("Picklingis done ...")
+print()
+f.close()
+time.sleep(2)
+print("End of an application ...")
+
+
+unpick.py
+=======
+import time 
+import test1 
+import pickle 
+f=open("info1.txt","rb")
+while(True):
+    try:
+        obj1=pickle.load(f)
+        obj1.m1()
+        print()
+    except EOFError as e:
+        print("There is excpetion:",e)
+        break 
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+Working with CSV module:
+=====================
+Python supports a module called CSV module.The main objective of csv module is the insert the 
+data into csv file or xl fil.In python we do have a module a called csv module inside the csv module we do have following sub modules.
+
+->write():It is used to write the data into a csv file
+->reader():It is used to read the data from the csv file
+->writerow():It is used to insert the content into a csv file.
+
+
+Ex1:
+===
+import time 
+import csv 
+with open("data1.csv","w",newline="") as f:
+    d1=csv.writer(f)
+    d1.writerow(["Eid","Ename","Esal","Design","Company"])
+    n=int(input("Enter the number of rows:"))
+    for x in range(n):
+        eid=int(input("Enter the eid:"))
+        ename=input("Enter the ename:")
+        esal=float(input("Enter the esal:"))
+        design=input("Enter the design:")
+        company=input("Enter the company:")
+        d1.writerow([eid,ename,esal,design,company])
+    print("A CSV file is created successfully")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+import csv 
+f=open("data1.csv","r")
+d1=csv.reader(f)
+print(d1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+import csv 
+f=open("data1.csv","r")
+d1=csv.reader(f)
+d2=list(d1)
+print(d2)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+import csv 
+f=open("data1.csv","r")
+d1=csv.reader(f)
+d2=list(d1)
+for a in d2:
+    for b in a:
+        print(b,end=" ")
+    print()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Zipping & Unzipping:
+=================
+
+
+Zipping:
+=======
+It is proces or method to convert more than one file into a zip file format.The main objective of
+zipping is reduce the size of the file.In python we do have a module called zipfile inside the zipfile 
+module we do have another sub module ZipFile("filename.zip","w",ZIP_DEFALTED)
+
+
+Ex1:
+===
+import time 
+from zipfile import * 
+f=ZipFile("files.zip","w",ZIP_DEFLATED)
+f.write("number.txt")
+f.write("otp.txt")
+f.write("email.txt")
+print()
+print("A zip file is created successfully ...")
+f.close()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Unzipping:
+========
+It is prcocess or methodlogy to read the files and it content from the zip folder then.It is said to be unzipping methodlogy.
+f=ZipFile("files.zip","r",ZIP_STORED)
+
+namelist()
+
+Ex1:
+===
+import time 
+from zipfile import * 
+f=ZipFile("files.zip","r",ZIP_STORED)
+d1=f.namelist()
+print(d1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+from zipfile import * 
+f=ZipFile("files.zip","r",ZIP_STORED)
+d1=f.namelist()
+for d2 in d1:
+    print("File name is:",d2)
+    print("-------------------")
+    f1=open(d2,"r")
+    d4=f1.read()
+    print(d4)
+    print()
+print("---------------------")
+f.close()
+time.sleep(2)
+print("End of an application ...")
+
+
+Object serialization & Object serialization
+=================================:
+
+
+Object serialization:
+================
+Python supports object serialization.It is the process or methodlogy to convert python object into JSON object 
+
+
+
+Python Object                                                                                       JSON Object
+----------------------------------------------------------------------------------------------
+Int,float                                                                                                         number data type
+str data type                                                                                                string data type
+list,tuple,set                                                                                                 array data type
+dict data type                                                                                                object data type
+None                                                                                                                 null 
+True,False                                                                                                       true,false
+---------------------------------------------------------------------------------------------------
+
+json module
+---------------
+dump(t,f) ----OS
+
+Ex1:
+===
+import time 
+import json 
+d1={}
+d1['eid']=1001
+d1['ename']="Rahul Redddy"
+d1['esal']=37000 
+d1['design']="JavaScript Developer"
+d1['visa_status']=True 
+d1['status']=None
+print()
+with open("tool1.txt","w") as f:
+    json.dump(d1,f)
+print("Object serilization is done ...")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Object serialization:
+================
+It is process or methodlogy to convert the JSON object into Python object.
+load(f)
+
+
+Ex1:
+===
+import time 
+import json 
+with open("tool1.txt","r") as f:
+    obj1=json.load(f)
+    print(obj1)
+    print()
+    for x,y in obj1.items():
+        print(x,"---",y)
+print()
+print("Object deserialization is done  ...")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+ 
+
+
+
+

@@ -1,0 +1,393 @@
+Method overaloding with default argument
+===================================
+
+Ex1:
+===
+import time
+class QT_class:
+    def m1(self,x=None,y=None,z=None):
+        if x!=None and y!=None and z!=None:
+            print("The sum of three arguments are:",x+y+z)
+        elif(x!=None and y!=None):
+            print("The sum of two arguments are:",x+y)
+        else:
+            print("Only allow two or three arguments ...")
+q1=QT_class()
+q1.m1(1000,2000,3000)
+print()
+q1.m1(100,200)
+print()
+q1.m1(10000)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Method overloading with variable length argument
+==========================================:
+
+Ex1:
+===
+import time
+class QT_class:
+    def m1(self,*x):
+        sum=0 
+        for x1 in x:
+            sum=sum+x1 
+        print("The sum of arguments are",sum)
+    
+    
+q1=QT_class()
+q1.m1()
+print()
+q1.m1(10)
+print()
+q1.m1(10,20)
+print()
+q1.m1(10,20,30)
+print()
+q1.m1(10,20,30,40)
+print()
+q1.m1(10,20,30,40,50)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time
+class QT_class:
+    def m1(self,*x):
+        print(x)  
+q1=QT_class()
+q1.m1()
+print()
+q1.m1(10)
+print()
+q1.m1(10,20)
+print()
+q1.m1(10,20,30)
+print()
+q1.m1(10,20,30,40)
+print()
+q1.m1(10,20,30,40,50)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time
+class QT_class:
+    def m1(self,*x):
+        for x1 in x:
+            print(x1) 
+q1=QT_class()
+q1.m1()
+print()
+q1.m1(10)
+print()
+q1.m1(10,20)
+print()
+q1.m1(10,20,30)
+print()
+q1.m1(10,20,30,40)
+print()
+q1.m1(10,20,30,40,50)
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex4:
+===
+import time
+class QT_class:
+    def m1(self,*x):
+        for x1 in x:
+            time.sleep(1)
+            print(x1) 
+q1=QT_class()
+q1.m1("Kajal","Guptha","kajal12345","_12345","_12345","kajal@gmail.com")
+print()
+q1.m1("Rahul","Verma","rahul12345","12345","12345","rahul@gmail.com")
+print()
+q1.m1("Ajay","Guptha","ajay12345","1234","1234","ajay@gmail.com")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+constructor overlaoding:
+===================
+Constructor overloading can be represent as same constructor name with one or more than number of arguments then it is said to be constructor overloading.
+
+Ex1:
+====
+import time 
+class QT_class:
+    def __init__(self):
+        print("Zero number of arguments")
+    def __init__(self,x1):
+        print("One number of arguments")
+    def __init__(self,x1,y1):
+        print("Two number of arguments")
+    def __init__(self,x1,y1,z1):
+        print("Three number of arguments")
+q1=QT_class()
+print()
+q2=QT_class("A")
+print()
+q3=QT_class("A","B")
+print()
+q4=QT_class("A","B","C")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class QT_class:
+    def __init__(self):
+        print("Zero number of arguments")
+    def __init__(self,x1):
+        print("One number of arguments")
+    def __init__(self,x1,y1):
+        print("Two number of arguments")
+    def __init__(self,x1,y1,z1):
+        print("Three number of arguments")       
+q4=QT_class("A","B","C")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+constructor overlaoding with default argument
+======================================
+
+Ex1:
+===
+import time 
+class QT_class:
+    def __init__(self,a=None,b=None,c=None):
+        print("This is advance python ...")
+q1=QT_class(10,20,30)
+print()
+q2=QT_class(10,20)
+print()
+q3=QT_class(10)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+constructor overlaoding with variable length argument
+=============================================
+
+Ex1:
+===
+import time 
+class QT_class:
+    def __init__(self,*a):
+        print("This is advance python ...")
+q1l=QT_class()
+print()
+q2=QT_class(10)
+print()
+q3=QT_class(10,20)
+print()
+q4=QT_class(10,20,30)
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+
+
+Method overriding & constructor overriding:
+====================================
+Ex1:
+------
+import time 
+class Product:
+    def __init__(self,pname,price):
+        self.pname=pname 
+        self.price=price 
+    def m1(self):
+        print("Pname is:",self.pname)
+        print("Price is:",self.price)
+class Samsung(Product):
+    def __init__(self,pname,price,pid,company):
+        super().__init__(pname,price)
+        self.pid=pid 
+        self.company=company
+    def m2(self):
+        super().m1()
+        print("Pid is:",self.pid)
+        print("Company is:",self.company)
+s1=Samsung("Samsung Mobile",18000,1001,"Samsung")
+s1.m2()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+
+->abstract method
+->abstract class
+->an Interface
+
+
+->abstract method:
+===============
+Some time we dont the implementation of class even though we can define or declare 
+a method such methods are called abstract.In python abstract method is present in abc module.
+
+
+Ex1:
+===
+import time
+from abc import *  
+class QT_class:
+    @abstractmethod
+    def m1(self):
+        pass 
+q1=QT_class()
+q1.m1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+->abstract class
+===============
+If you want implement partical implementation than we can go with abstract class which is
+derived by ABC 
+
+Ex1:
+===
+import time
+from abc import *  
+class QT_class(ABC):
+    @abstractmethod
+    def m1(self):
+        pass 
+q1=QT_class()
+q1.m1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+OUTPUT
+-------------
+Traceback (most recent call last):
+  File "test1.py", line 7, in <module>
+    q1=QT_class()
+TypeError: Can't instantiate abstract class QT_class with abstract methods m1
+
+
+Ex2:
+===
+import time
+from abc import * 
+class Vehical(ABC) :
+    @abstractmethod 
+    def m1(self):
+        pass 
+class Bike(Vehical):
+    def m1(self):
+        return "2"
+class Car(Vehical):
+    def m1(self):
+        return "4"
+class Auto(Vehical):
+    def m1(self):
+        return "3"
+b1=Bike()
+print(b1.m1())
+print()
+c1=Car()
+print(c1.m1())
+print()
+a1=Auto()
+print(a1.m1())
+
+
+->an Interface:
+===========
+Python supports an interface.An interface can be represent as if abstract class can only 
+constain only abstract methods then it is said to an interface.In real time application we 
+can use an interface for specification purpose.
+
+globals()[] ---->string  into object
+
+
+Ex1:
+===
+import time 
+from abc import * 
+class DBInterface(ABC):
+    @abstractmethod
+    def connect(self):
+        pass
+    @abstractmethod 
+    def disconnect(self):
+        pass 
+class Oracle(DBInterface):
+    def connect(self):
+        print("Connect to Oralce server for indian customers ...")
+    def  disconnect(self):
+        print("Disconnecting from oracle server for indian customers")
+class MySQL(DBInterface):
+    def connect(self):
+        print("Connect to MYSQL server for USA customers ...")
+    def disconnect(self):
+        print("Disconnecting from MYSQL server for usa customers")
+class MongoDB(DBInterface):
+    def connect(self):
+        print("Connect to MongoDB server for chinese customers ...")
+    def  disconnect(self):
+        print("Disconnecting from MongoDB server for chinsese customers")
+print()
+db=input("Enter the database here:")
+classname=globals()[db]
+x=classname()
+time.sleep(2)
+x.connect()
+print()
+time.sleep(2)
+x.disconnect()
+print()
+time.sleep(3)
+print()
+print("End of an application ...")
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+
+
+     
+
+     
+
+     
+
+     
+

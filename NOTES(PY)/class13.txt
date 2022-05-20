@@ -1,0 +1,173 @@
+CLA(command line argument) in Python
+===============================
+Python supports CLA which stands for command line Argument.Command line argument can be
+represent as The arguments which are passing at of python script execution than it is said to be
+command line argument.If you want to implement command line argument in python we must import sys module.Inside the sys module we do have a variable argv variable
+
+
+->argv is list type not an array type
+->When ever if we are working with argv variable along with arguments file name will appear inside the list as indexing position
+->Indexing is applicble while working with argv variable
+->Slice operations is also applicable while working with argv variable
+->Inside the list each object is string type while working with argv variable.If we are trying to 
+use + operator between the arguments Here + operatoe will act as string concatenation to over 
+come this we required typecasting
+->While working command line argument if reading full name with space than we must use 
+"" not with single ''
+
+
+
+Ex1:
+===
+import time 
+from sys import argv 
+print(argv)
+print()
+print(type(argv))
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+from sys import argv 
+print(argv)
+print()
+print(type(argv))
+print()
+print("---Indexing---")
+print(argv[0])
+print(argv[1])
+print(argv[2])
+print(argv[3])
+print("--------")
+print()
+print("----Data types----")
+print(type(argv[0]))
+print(type(argv[1]))
+print(type(argv[2]))
+print(type(argv[3]))
+print("-------------")
+
+
+Ex3:
+==
+import time 
+from sys import argv 
+print(argv)
+print()
+print(type(argv))
+print()
+print("---String Concatenation---")
+print(argv[1]+argv[2]+argv[3])
+print("-----------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+from sys import argv 
+print(argv)
+print()
+print(type(argv))
+print()
+print("---'+'---")
+print(int(argv[1])+int(argv[2])+int(argv[3]))
+print("-----------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+from sys import argv 
+print(argv)
+print()
+print(type(argv))
+print()
+sum=0
+for x in argv[1:]:
+    x1=int(x)
+    sum=sum+x1
+print("The sum of arguments:",sum)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time 
+from sys import argv 
+print(argv)
+print()
+print(type(argv))
+print()
+sum=0
+for x in argv[1:]:
+    #x1=int(x)
+    #sum=sum+x1
+    sum=sum+x
+print("The sum of arguments:",sum)
+print()
+time.sleep(1)
+print("End of an application ...")
+
+
+OUTPUT:
+=======
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+Traceback (most recent call last):
+  File "test1.py", line 11, in <module>
+    sum=sum+x
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+
+Ex7:
+===
+import time 
+from sys import argv 
+print("My full name is:",argv[1])
+print()
+print(type(argv[1]))
+print()
+print("---------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

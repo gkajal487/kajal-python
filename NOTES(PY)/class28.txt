@@ -1,0 +1,439 @@
+super():
+======
+Pyhton supports super() keyword.The main objective of super() is to access the parent members
+its classes as as per the application requirement.Memebers can be either methods or variables.
+
+Ex1:
+===
+import time 
+class Person_Class:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age 
+    def m1(self):
+        print("Name is:",self.name)
+        print("Age is:",self.age)
+class Employee_Class(Person_Class):
+    def __init__(self,name,age,eid,esal,design,company):
+        super().__init__(name,age)
+        self.eid=eid 
+        self.esal=esal 
+        self.design=design 
+        self.company=company 
+    def m2(self):
+        super().m1()
+        print("Eid is:",self.eid)
+        print("Esal is:",self.esal)
+        print("Design is:",self.design)
+        print("Company is:",self.company)
+class Student_Class(Person_Class):
+    def __init__(self,name,age,sid,sub,marks):
+        super().__init__(name,age)
+        self.sid=sid 
+        self.sub=sub 
+        self.marks=marks 
+    def m3(self):
+        super().m1()
+        print("Sid is:",self.sid)
+        print("Subject is:",self.sub)
+        print('Marks are:',self.marks)
+class Tutor_Class(Person_Class):
+    def __init__(self,name,age,sal,sub):
+        super().__init__(name,age)
+        self.sal=sal 
+        self.sub=sub 
+    def m4(self):
+        super().m1()
+        print("Sal is:",self.sal)
+        print("Subject is:",self.sub)
+e1=Employee_Class("Mahesh",23,1001,45000,"DAD","TM")
+e1.m2()
+print()
+s1=Student_Class("Ajay",21,101,"Python",76)
+s1.m3()
+print()
+t1=Tutor_Class("John",31,85000,"Django")
+t1.m4()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class QT_Class:
+    def __init__(self):
+        print("Constructor ....")
+    def m1(self):
+        print("Instance method ...")
+    @classmethod 
+    def m2(cls):
+        print("Class method ...")
+    @staticmethod 
+    def m3():
+        print("Static method ...")
+class I_HUB(QT_Class):
+    def __init__(self):
+        super().__init__()
+        super().m1()
+        super().m2()
+        super().m3()
+i=I_HUB()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+class QT_Class:
+    def __init__(self):
+        print("Constructor ....")
+    def m1(self):
+        print("Instance method ...")
+    @classmethod 
+    def m2(cls):
+        print("Class method ...")
+    @staticmethod 
+    def m3():
+        print("Static method ...")
+class I_HUB(QT_Class):
+    def info(self):
+        super().__init__()
+        super().m1()
+        super().m2()
+        super().m3()
+i=I_HUB()
+i.info()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Note:
+====
+We cannot access parent memebers in its child class static method and class method
+
+
+Ex4:
+===
+import time 
+class A_class:
+    def m1(self):
+        print("A class implementation")
+class B_class(A_class):
+    def m1(self):
+        print("B class implementation")
+class C_class(B_class):
+    def m1(self):
+        print("C class implemetation ...")
+class D_class(C_class):
+    def m1(self):
+        A_class.m1(self)
+        print()
+        super(B_class,self).m1()
+d=D_class()
+d.m1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+class QT_class:
+    company_name="IBM"
+    def __init__(self):
+        self.company_name1="Dell"
+class I_HUB_class(QT_class):
+    def m1(self):
+        print("Parent company name is:",super().company_name)
+        print("Child company name is:",self.company_name1)
+i=I_HUB_class()
+i.m1()
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Polymorpshim:
+===========
+Python supports polymorpshim.poly means many morpshism forms.In python we can implement polymorpshism using following methodlogies
+
+->overloading
+->overriding 
+
+
+->overloading:
+------------------
+->Operator overloading
+->Method overloading
+->Constructor overloading
+
+
+->overriding 
+---------------
+Method overriding
+Constructor overriding
+
+
+
++   
+*
+
+
+->operator overloading:
+===================
+Pyhton supports operator overloading using magic methods.Following are the magic methods in
+python
+
++ ---->def __add__(self,other): 
+* ---->def __mul__(self,other):
+/ ----->def __truediv__(self,other):
+- ----->def __sub__(self,other):
+//--->def __floordiv__(self,other):
+% --->def __mod__(self,other):
+** --->def __pow__(self,other):
+
+
+Magic methods for Assignment operator
+--------------------------------------------------
++= ---->def __iadd__(self,other): 
+*= ---->def __imul__(self,other):
+/= ----->def __itruediv__(self,other):
+-= ----->def __isub__(self,other):
+//=--->def __ifloordiv__(self,other):
+% =--->def __imod__(self,other):
+**= --->def __ipow__(self,other):
+>   ---->def __gt__(self,other):
+>= ---->def __ge__(self,other):
+<  ----->def __lt__(self,other):
+<= ----->def __le__(self,other)
+== ---->def __eq__(self,other):
+!=  ---->def __ne__(self,other):
+
+
+
+Ex1:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+p1=Product(100)
+print(p1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+    def __str__(self):
+        return "The number of items in p1 is:"+str(self.item)
+p1=Product(100)
+print(p1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+    def __str__(self):
+        return str(self.item)
+    def __add__(self,other):
+        return self.item+other.item
+p1=Product(100)
+print("The number of items in p1 is:",p1)
+print()
+p2=Product(200)
+print("The number of items in p2 is:",p2)
+print()
+print("The total number of items in p1 & p2 are:",p1+p2)
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+    def __str__(self):
+        return str(self.item)
+    def __mul__(self,other):
+        return self.item*other.item
+p1=Product(100)
+print("The number of items in p1 is:",p1)
+print()
+p2=Product(200)
+print("The number of items in p2 is:",p2)
+print()
+print("The total number of items in p1 & p2 are:",p1*p2)
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+    def __str__(self):
+        return str(self.item)
+    def __truediv__(self,other):
+        return self.item/other.item
+p1=Product(100)
+print("The number of items in p1 is:",p1)
+print()
+p2=Product(20)
+print("The number of items in p2 is:",p2)
+print()
+print("The total number of items in p1 & p2 are:",p1/p2)
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+    def __str__(self):
+        return str(self.item)
+    def __iadd__(self,other):
+        return self.item+other.item
+p1=Product(100)
+print("The number of items in p1 is:",p1)
+print()
+p2=Product(20)
+print("The number of items in p2 is:",p2)
+print()
+p1+=p2 #p1=p1+p2
+print("The total number of items in p1 & p2 are:",p1)
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+class Product:
+    def __init__(self,item):
+        self.item=item
+    def __str__(self):
+        return str(self.item)
+    def __add__(self,other):
+        total_items=self.item+other.item 
+        p=Product(total_items)
+        return p
+       
+p1=Product(100)
+print("The number of items in p1 is:",p1)
+print()
+p2=Product(20)
+print("The number of items in p2 is:",p2)
+print()
+p3=Product(30)
+print("The number of items in p3 is:",p3)
+print()
+p4=Product(40)
+print("The number of items in p4 is:",p4)
+print()
+
+print("The total number of items in p1 & p2 & p3 & p4 are:",p1+p2+p3+p4)
+time.sleep(2)
+print("End of an application ...")
+
+
+
+->Method overloading
+---------------------------
+
+Method overloading can be represent as same method name with zero or more than one number
+of arguments then it is said to  method overloading.
+
+Ex1:
+----
+import time 
+class I_HUB:
+    def m1(self):
+        print("Zero number of arguments")
+    def m1(self,x1):
+        print("One number of arguments")
+    def m1(self,x1,x2):
+        print("Two number of arguments")
+    def m1(self,x1,x2,x3):
+        print("Three number of arguments ..")
+i=I_HUB()
+i.m1()
+i.m1(10)
+i.m1(10,20)
+i.m1(10,20,30)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+class I_HUB:
+    def m1(self):
+        print("Zero number of arguments")
+    def m1(self,x1):
+        print("One number of arguments")
+    def m1(self,x1,x2):
+        print("Two number of arguments")
+    def m1(self,x1,x2,x3):
+        print("Three number of arguments ..")
+i=I_HUB()
+i.m1(10,20,30)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

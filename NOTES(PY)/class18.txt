@@ -1,0 +1,412 @@
+Comprehension in python:
+=====================
+Python supports comprehension.
+
+->List comprehenion
+->Tuple comprehesion
+->Set comprehension
+->Dict comprehension
+
+
+->List comprehenion:
+==================
+List comprehenion can be represent as if we are using one or more than one expression with 
+one or more than one condition inside the list.
+
+Ex1:
+===
+import time 
+l1=[x*x for x in range(10)]
+print(l1)
+print()
+print(type(l1))
+print()
+for a in l1:
+    print(a)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+l1=[x*x for x in range(10) if x%2==1]
+print(l1)
+print()
+print(type(l1))
+print()
+for a in l1:
+    print(a)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Tuple comprehesion:
+==================
+Ex1:
+===
+import time 
+t1=(x*x for x in range(10))
+print(t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex2:
+===
+import time 
+t1=(x*x for x in range(10))
+print(*t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex3:
+===
+import time 
+t1=(x*x for x in range(10))
+for a in t1:
+    print(a)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex4:
+====
+import time 
+t1=(x*x for x in range(10) if x%2==0)
+for a in t1:
+    print(a)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+->Set comprehension
+------------------------
+import time 
+t1={x*x for x in range(10)}
+print(t1)
+print()
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+import time 
+t1={x*x for x in range(10) if x%2==0}
+print(t1)
+print()
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+->Dict comprehension:
+===================
+import time 
+d1={number:number*number for  number in range(10)}
+print(d1)
+print()
+print(type(d1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+import time 
+d1={number:number*number for  number in range(10)}
+print(d1)
+print()
+print("number","----","square of number")
+print("-------------------------------")
+for a,b in d1.items():
+    print(a,"-------",b)
+print()
+print(type(d1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Working with zip():
+===============
+It is a predefine function in python.It return tuple object.The main objective of zip() function
+is to perform following operations.
+
+->Converting one type of data structure type to another  type of data structure
+->It is used to fetch the more two values as per the appliction requirement.
+
+
+Ex1:
+===
+import time 
+l1=[1,2,3]
+print(l1)
+print()
+print(type(l1))
+t1=tuple(l1)
+print(t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+l1=[1,2,3]
+l2=[4,5,6]
+l3=[7,8,9]
+#print(l1)
+#print()
+#print(type(l1))
+t1=tuple(l1,l2,l3)
+print(t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+OUTPUT
+----------
+1, 2, 3]
+
+<class 'list'>
+Traceback (most recent call last):
+  File "test1.py", line 8, in <module>
+    t1=tuple(l1,l2,l3)
+TypeError: tuple expected at most 1 arguments, got 3
+
+
+Ex3:
+===
+import time 
+l1=[1,2,3]
+l2=[4,5,6]
+l3=[7,8,9]
+t1=tuple(zip(l1,l2,l3))
+print(t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+l1=[1,2,3]
+l2=[4,5,6]
+l3=[7,8,9]
+t1=set(zip(l1,l2,l3))
+print(t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+l1=[1,2,3,4,5,6,7]
+l2=[4,5,6,10,12,14,15]
+t1=dict(zip(l1,l2))
+print(t1)
+print()
+print(type(t1))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+====
+import time 
+l1=["pid","pname","price","company","m_date","exp_date"]
+l2=[1001,"Mobile",23000,"VIVO","12/12/2021","12/12/2022"]
+res1=dict(zip(l1,l2))
+print(res1)
+print()
+print(type(res1))
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+Eid Ename  Esal   Design   Company
+=============================
+1001   Ravi   43000    DAD           TM
+1002    Raj      45000    DAD          TCS
+1003     Arvind  34000    JR DAD   CG
+============================
+
+Ex1:
+===
+import time 
+eid=[]
+ename=[]
+esal=[]
+design=[]
+company=[] 
+while(True):
+    a=int(input("Enter the eid:"))
+    eid.append(a)
+    b=input("Enter the ename:")
+    ename.append(b)
+    c=float(input("Enter the esal:"))
+    esal.append(c)
+    d=input('Enter the design:')
+    design.append(d)
+    e=input("Enter the company:")
+    company.append(e)
+    option=input("Do you want to insert another record:[YES|NO]:")
+    if(option=="NO"):
+        break 
+print("Eid","Ename","Esal","Design","Company")
+print('-------------------------------------')
+for y1,y2,y3,y4,y5 in zip(eid,ename,esal,design,company):
+    print(y1,y2,y3,y4,y5)
+print("--------------------------------------")
+print()
+time.sleep(1)
+print("End of an application ..")
+
+
+Functional programming language in python
+====================================
+
+What is function?
+---------------------
+A function can be represent as block of unit or piece of code.The main objective of  functional programming language is provide the code reusability which means once we create a function
+with business logic we can call the function any number of time.In python we do have functions
+
+->predefine function
+->user define function
+
+->predefine function:
+=================
+A function  which is created or developed at time of developing python programming language then it is said predefine function
+input()
+print()
+zip()
+eval()
+
+->user define function
+===================
+A function which is created or developed by programmers or developers as per the application
+requirement while writing the business logic then it is said to user define function.In python we 
+can define or declare user define function using def keyword
+
+
+def  Test_Cas1(): ---->Called Function
+        ====  
+        =====
+Test_Cas1()
+Test_Cas1()
+Test_Cas1() ----->Calling Function
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    print("Welcome to functions in python ...")
+    Test_Case1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    print("Welcome to functions in python ...")
+Test_Case1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+Ex3:
+===
+import time 
+def Test_Case1():
+    print("Welcome to functions in python ...")
+Test_Case1()
+Test_Case1()
+Test_Case1()
+Test_Case1()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Formal & Actual Parameters
+=======================
+Formal Parameters:
+================
+FP can be represent as while defining or declaring a function if we are using variables as parameters to the function then it is said to formal parameter.
+
+
+Actual Parameters:
+===============
+AP can be represent as while calling a function if we are using parameters as a value then.It is said to be Atual parameter.
+
+
+Ex1:
+==
+import time 
+def Product_Case1(pid,pname,price,company):
+    print('---Product Information---')
+    print("Pid is :",pid)
+    print("Pname is:",pname)
+    print("Price is:",price)
+    print('Company is:',company)
+    print("---------------------")
+Product_Case1(1001,"Mobile",17000,"ONE PLUS")
+print()
+Product_Case1(1002,"Mobile",18000,"VIVO")
+print()
+Product_Case1(1003,"Mobile",27000,"APPLE")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+

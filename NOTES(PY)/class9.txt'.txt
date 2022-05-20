@@ -1,0 +1,229 @@
+Operators in Python
+================
+What is an operator?
+------------------------
+An operator is a symbol which is used to perform operation between the operands or variables as 
+per the application requirement.Python supports following types operators
+
+->Arithmetic operator
+->Assignment operator
+->Logical operator
+->Comparision operator
+->Equality operator
+->Specail type of operator
+->Ternary operator
+->bitwise operator
+
+
+->Arithmetic operator
+==================
+Python supports AO.The main objective of AO is perform some arithemetic operation in our
+application as per the application requirement.Following are theAO
+
+->+,-,/,//,*,%,**
+
+
+Ex1:
+===
+import time 
+x=int(input("Enter the value of x:"))
+y=int(input("Enter the value  of y:"))
+print()
+print("---AO----")
+res1=x+y 
+print("The sum is:",res1)
+print()
+res2=x-y 
+print("The sub is:",res2)
+print()
+res3=x/y 
+print("The div is:",res3)
+print()
+res4=x//y 
+print("The floor div is:",res4)
+print()
+res5=x%y 
+print("The mod is:",res5)
+print()
+res6=x**y 
+print("The pow is:",res6)
+print()
+res7=x*y 
+print("The mul is:",res7)
+print("----------------------")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Assignment operator:
+===================
+Python supports assignment operator.The main objective of assignment operator is to utilize the 
+memory allocation.
+
+x=x+y   --->x+=y
+x=x*y   ---->x*=y
+...
+...
+
+Ex1:
+===
+import time 
+x=int(input("Enter the value of x:"))
+y=int(input("Enter the value  of y:"))
+print()
+print("---Assignment operator---")
+x+=y
+print("The sum is:",x)
+print("--------------------")
+print()
+time.sleep(2)
+print("End of an application ..")
+
+
+Ex2:
+===
+import time 
+x=int(input("Enter the value of x:"))
+y=int(input("Enter the value  of y:"))
+print()
+print("---Assignment operator---")
+x+=y
+print("The sum is:",x)
+x/=y
+print("The div is:",x)
+print()
+x*=y 
+print("The mul is:",x)
+print()
+x-=y 
+print("The sub is:",x)
+x%=y 
+print("The mod is:",x)
+print()
+x**=y 
+print("The pow is:",x)
+print()
+x//=y 
+print("The floor div is:",x)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Logical operator:
+===============
+Python supports logical operator.The main objective of logical operator is perform some logical 
+operation in our application as per the application requirement.Following are the logical operators in python
+
+->logical and  --->and 
+->Logical or  ----> or
+->Logical not ---> not
+
+
+->logical and  --->and 
+==================
+x     y        x andy
+0     1             0
+1      0             0
+1      1             1
+0     0              0
+=================
+
+
+Ex1:
+===
+import time 
+print('----WELCOME TO I_HUB SERVICES----')
+username=input("Enter the username:")
+password=input("Enter the password:")
+if(username=="yash12345" and password=="12345"):
+    print(username,password,":LOGIN SUCCESSFULLY ...")
+else:
+    print(username,password,":Dear user enter valid detials ...")
+print('---------------------------')
+print()
+time.sleep(1)
+print("End of an application")
+
+
+Note:
+====
+Logical and operator is meant for to provide the security to our application
+
+
+->Logical or  ----> or
+-------------------------
+x     y        x or y
+0     1             1
+1      0             1
+1      1             1
+0     0              0
+=================
+
+
+Ex1:
+===
+import time 
+fname=input("Enter the fname:")
+lname=input("Enter the lname:")
+username=input("Enter the username:")
+p1=input("Enter the password:")
+p2=input("Enter the confirm password:")
+email=input("Enter the email address:")
+if((fname=="yash" or lname=="borse"))or(username=="yash123" and p1=="12345" and p2=="12345" and email=="yash@gmail.com" ):
+    print("---New User details---")
+    print("Fname is:",fname)
+    print("Lname is:",lname)
+    print("Username is:",username)
+    print("Password is:",p1)
+    print("Confirm password is:",p2)
+    print("Email is:",email)
+    print("---------------------")
+else:
+    print("Dear user please enter username,p1,p2,email ..")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+Logical not operator:
+=================
+Python supports logical not operator
+
+1   0
+
+0    1
+
+
+import time 
+x=True 
+print(x)
+print(type(x))
+print()
+y=not x 
+print(y)
+print()
+print(type(y))
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

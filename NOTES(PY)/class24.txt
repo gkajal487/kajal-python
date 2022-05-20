@@ -1,0 +1,530 @@
+Ex1:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---First 2 rows---')
+print(d1.head(2))
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---last 2 rows---')
+print(d1.tail(2))
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---Using sum()---')
+print(d1.sum())
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex5:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---Using sum(1)---')
+print(d1.sum(1))
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex6:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---Using max()---')
+print(d1.max())
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex7:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---Using min()---')
+print(d1.min())
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex8:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+print()
+print('---Using count()---')
+print(d1.count())
+print("-----------------")
+time.sleep(2)
+print("End of an application ...")
+
+
+
+->iteritems()
+->iterrows()
+->itertuples()
+
+
+->iteritems():
+===========
+It will fetch the table data or information into column format.
+
+Ex1:
+----
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+for d2 in d1.iteritems():
+    print(d2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+->iterrows():
+==========
+It will fetch the data or information in row format
+
+Ex1:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+for d2 in d1.iterrows():
+    print(d2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+->itertuples():
+==========
+It is used to fetch the data or information into a tuple format.
+
+
+import time 
+import numpy as np 
+import pandas as pd 
+data=[[1001,"Rahul",45000,"DAD","CG"],[1002,"Ajay",47000,"IOT","CG"],[1003,"Akil",40000,"Python developer","CG"],[1004,"Sameer",41000,"Flask developer","CG"]]
+d1=pd.DataFrame(data,columns=['Eid','Ename','Esal','Design','Company'],index=['B1','B2','B3','B4'])
+print()
+print("------------------------------")
+print(d1)
+print()
+for d2 in d1.itertuples():
+    print(d2)
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+
+Ex1:
+----
+import time 
+import csv  
+with open("data1.csv","w",newline="") as f:
+    d1=csv.writer(f)
+    d1.writerow(["Pid","Pname","price","Company"])
+    n=int(input("Enter the number of rows:"))
+    for x in range(n):
+        pid=int(input("Enter the pid:"))
+        pname=input("Enter the pname:")
+        price=float(input('Enter the price:'))
+        company=input("Enter the company:")
+        d1.writerow([pid,pname,price,company])
+    print("A csv file is created successfully ...")
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex2:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+d1=pd.read_csv("data1.csv")
+print("---------------")
+print(d1)
+print("-----------------")
+print()
+time.sleep(2)
+print("End of an application ")
+
+
+Ex3:
+===
+import time 
+import numpy as np 
+import pandas as pd 
+d1=pd.read_csv("data1.csv")
+print("---------------")
+print(d1)
+print("-----------------")
+print()
+print("---First 2 rows---")
+print(d1.head(2))
+print()
+print("---Last 2 rows---")
+print(d1.tail(2))
+print()
+time.sleep(2)
+print("End of an application ")
+
+
+
+
+OOPL in python:
+==============
+
+->When do we say a programming language is said to be object oriented programming language?
+
+->A programming language is a said to be OOPL.If it contains classes ,objects,specail methods and if our python script is starting with class and creating an object for that class.Then it is said to be object oriented programming language.
+
+
+What is class?
+----------------
+Class a design or template or blueprint for the sake of object creation.
+
+How to create a class in python
+--------------------------------------
+We can create a class using class keyword name followed by class name.
+
+class  class_name:
+        -----
+         ------
+What is an object?
+----------------------
+An object can be represent physical exitance of class or real time entity.An object can be created
+as follows 
+
+class Test1:
+      -----
+      ----
+t1=Test1() ----->Object creation in python
+
+
+
+methods in OOPL in python
+======================
+->Constructor
+->Instance method 
+->Class method
+->Static method
+
+
+Variables in OOPL in python
+=======================
+->Default variable
+->Instance variable
+->static variable
+->local variable
+
+
+->Constructor:
+===========
+->Constructor is a specail method in python.The main objective of constructor is define or 
+declare application variables.We can represent as follows def__init__(self):
+->Per object constructor will be executed only once
+->Constructor will be executed automatically when we create an object of a class
+->If we are not defining or  not declaring constructor explicitly then PVM  will create 
+defualt construcor
+
+
+Note:
+====
+While working with object oriented programming language object is the root class.
+
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print('This is constructor ...')
+i1=I_HUB()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex3:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print('This is constructor ...')
+i1=I_HUB()
+print()
+i2=I_HUB()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+====
+import time 
+class I_HUB:
+    def __init__(x1):
+        print('This is constructor ...')
+i1=I_HUB()
+print()
+i2=I_HUB()
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+->Instance method :
+================
+Instance method can be define or declare as def m1(self):  .The main objective of instance method is write the business logic.We can access instance method using object reference 
+variable or reference variable after creating an object for the class.
+
+
+Ex1:
+===
+import time 
+class I_HUB:
+    def m1(self):
+        print("This instance method ...")
+i1=I_HUB()
+i1.m1()
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+->Class method:
+=============
+Class method can be define or declare as @classmethod def m2(cls): .The main objective of 
+class method is perform class level operation.We can access class method using class_name 
+and using object reference variable.
+
+
+Ex1:
+===
+import time 
+class I_HUB:
+    @classmethod
+    def m2(cls):
+        print('This is class method ...')
+i1=I_HUB()
+i1.m2()
+print()
+I_HUB.m2()
+print()
+time.sleep(2)
+print('End of an application ...')
+
+
+->Static method:
+==============
+Static method can be define or declare as @staticmethod decorator followd def m3(): . The main 
+objective of static method is for general utility purpose or instance use.We can access static method using object reference variable & class name.
+
+
+Ex1:
+===
+import time 
+class I_HUB:
+    @staticmethod 
+    def m3():
+        print("This is static method ...")
+i1=I_HUB()
+i1.m3()
+print()
+I_HUB.m3()
+print()
+time.sleep(2)
+print('End of an application ..')
+
+
+Ex2:
+===
+import time 
+class I_HUB:
+    @staticmethod 
+    def m3(a,b):
+        print("The sum is:",a+b)
+i1=I_HUB()
+i1.m3(100,200)
+print()
+I_HUB.m3(1200,1600)
+print()
+time.sleep(2)
+print('End of an application ..')
+
+
+Ex3:
+===
+import time 
+class I_HUB:
+    def __init__(self):
+        print("This is constructor")
+    def m1(self):
+        print("This is Instance method")
+    @classmethod 
+    def m2(cls):
+        print('This is class method')
+    @staticmethod
+    def m3():
+        print("This is static method")
+i1=I_HUB()
+print()
+i1.m1()
+print()
+i1.m2()
+print()
+i1.m3()
+time.sleep(2)
+print("End of an application ...")
+
+
+Ex4:
+===
+import time 
+class Product:
+    def __init__(self):
+        self.pid=1001 
+        self.pname="Mobile"
+        self.price=17500 
+        self.company="ONE PLUS"
+    def m1(self):
+        print("---Product Information----")
+        print("Pid is:",self.pid)
+        print("Pname is:",self.pname)
+        print('Price is:',self.price)
+        print("Company is:",self.company)
+        print("---------------------")
+print()
+p1=Product()
+p1.m1()
+print()
+time.sleep(2)
+print('End of an application ..')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

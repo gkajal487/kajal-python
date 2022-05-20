@@ -1,0 +1,11 @@
+import time
+f=open("email.txt","a")
+f.write("Abc@gmail\n")
+f.write("abc@gmail\n")
+f.write("ABC@gmail\n")
+print()
+print("A new file with content its created successfully")
+f.close()
+print()
+time.sleep(2)
+print("end of an application")
